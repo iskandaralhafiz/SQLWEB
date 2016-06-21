@@ -1,3 +1,4 @@
-HELLO
-COBA YA AJA
-PAK AKMAL APE KESAH
+<?php
+echo ("Anda berada di situs QUANTUM DINAMAIKA");
+?>
+
