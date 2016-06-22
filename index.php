@@ -36,7 +36,7 @@ catch ( PDOException $e ){
 die(print_r($e));
 }
 
-
+echo "koneksi sukses"
 ?>
 </body>
 </html>
