@@ -20,7 +20,9 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 <p>Fill in your name and email address, then click <strong>Submit</strong> to register.</p>
 <form method="post" action="index.php">
 ID PENGGUNA <input type="text" name="Kode_Pengguna" id="Kode_Pengguna"/></br>
-NAMA <input type="text" name="Nama_Pengguna" id="Nama_Pengguna"/></br>
+
+NAMA PENGGUNA <input type="text" name="Nama_Pengguna" id="Nama_Pengguna"/></br>
+
 <input type="submit" name="submit" value="Submit" />
 </form>
 <?php
