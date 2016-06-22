@@ -38,6 +38,27 @@ die(print_r($e));
 
 echo "koneksi sukses"
 
+ try  
+        {  
+            $tsql = "SELECT [Nama_Pengguna] FROM [dbo].[TblPengguna]";  
+            $getProducts = sqlsrv_query($conn, $tsql);  
+            if ($getProducts == FALSE)  
+                die(FormatErrors(sqlsrv_errors()));  
+            //$productCount = 0;  
+            while($row = sqlsrv_fetch_array($getProducts, SQLSRV_FETCH_ASSOC))  
+            {  
+                echo($row['Nama_Pengguna']);  
+                echo("<br/>");  
+               
+            }  
+            sqlsrv_free_stmt($getProducts);  
+            sqlsrv_close($conn);  
+        }  
+        catch(Exception $e)  
+        {  
+            echo("Error!");  
+        }  
+
 
 
 
