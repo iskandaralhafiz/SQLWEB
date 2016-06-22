@@ -44,7 +44,7 @@ $Kode_Pengguna = $_POST['Kode_Pengguna'];
 $Nama_Pengguna = $_POST['Nama_Pengguna'];
 
 // Insert data
-$sql_insert = "INSERT INTO dbo.TblPengguna (Kode_Pengguna, Nama_Pengguna) VALUES ($Kode_Pengguna, $Nama_Pengguna)";
+$sql_insert = "INSERT INTO dbo.TblPengguna (Kode_Pengguna, Nama_Pengguna) VALUES ('$Kode_Pengguna', '$Nama_Pengguna')";
 $stmn = sqlsrv_query($conn, $sql_insert);  
 
  sqlsrv_free_stmt($stmn);  
