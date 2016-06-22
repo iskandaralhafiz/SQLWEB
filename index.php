@@ -38,7 +38,7 @@ die(print_r($e));
 
 echo "koneksi sukses"
 
-if(!empty($_POST)) {
+
 try {
 $Kode_Pengguna = $_POST['Kode_Pengguna'];
 $Nama_Pengguna = $_POST['Nama_Pengguna'];
@@ -56,7 +56,7 @@ catch ( PDOException $e ){
 die(print_r($e));
 }
 echo "<h3>Your're registered!</h3>";
-}
+
 
 ?>
 </body>
