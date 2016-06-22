@@ -48,7 +48,7 @@ $sql_insert = "INSERT INTO dbo.TblPengguna (Kode_Pengguna, Nama_Pengguna)
 VALUES ($Kode_Pengguna, $Nama_Pengguna)";
 $stmn = sqlsrv_query($conn, $sql_insert);  
 
- sqlsrv_free_stmt($stmn);  
+ sqlsrv_execute($stmn);  
             sqlsrv_close($conn); 
 
 }
