@@ -37,6 +37,27 @@ die(print_r($e));
 }
 
 echo "koneksi sukses"
+
+if(!empty($_POST)) {
+try {
+$name = $_POST['Kode_Pengguna'];
+$email = $_POST['Nama_Pengguna'];
+
+// Insert data
+$sql_insert = "INSERT INTO registration_tbl (Kode_Pengguna, Nama_Pengguna)
+VALUES (?,?)";
+$stmt = $conn->prepare($sql_insert);
+$stmt->bindValue(1, $Kode_Pengguna);
+$stmt->bindValue(2, $Nama_Pengguna);
+$stmt->execute();
+}
+catch ( PDOException $e ){
+  print( "Error connecting to SQL Server" );
+die(print_r($e));
+}
+echo "<h3>Your're registered!</h3>";
+}
+
 ?>
 </body>
 </html>
