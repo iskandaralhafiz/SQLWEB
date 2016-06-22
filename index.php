@@ -58,10 +58,6 @@ echo "koneksi sukses"
         {  
             echo("Error!");  
         }  
-
-
-
-
 ?>
 </body>
 </html>
