@@ -45,10 +45,9 @@ $Nama_Pengguna = $_POST['Nama_Pengguna'];
 
 // Insert data
 $sql_insert = "INSERT INTO [dbo].[TblPengguna] (Kode_Pengguna, Nama_Pengguna) VALUES ($Kode_Pengguna,$Nama_Pengguna)";
-$stmt = sqlsrv_query($conn,$sql_insert);
-
+$stmt = $conn->query($sql_insert);
 $stmt->execute();
-sqlsrv_close( $conn ); 
+
 }
 catch ( PDOException $e ){
   print( "Error connecting to SQL Server" );
