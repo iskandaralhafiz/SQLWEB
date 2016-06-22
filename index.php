@@ -31,7 +31,11 @@ Try
 $conn = new PDO ( "sqlsrv:server = tcp:quantumcom.database.windows.net,1433; Database = DAPURPR", "qdadmin", "Kafalahajai5654@");
 $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 $tsql = "SELECT [Nama_Pengguna] FROM dbo.TblPengguna";  
-           sqlsrv_query($conn, $tsql);
+ $getProducts = sqlsrv_query($conn, $tsql);
+ while($row = sqlsrv_fetch_array($getProducts, SQLSRV_FETCH_ASSOC))  
+              
+                echo($row['Nama_Pengguna']);  
+                echo("<br/>");  
 
 }
 catch ( PDOException $e ){
