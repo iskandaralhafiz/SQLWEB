@@ -47,8 +47,8 @@ $Nama_Pengguna = $_POST['Nama_Pengguna'];
 $sql_insert = "INSERT INTO dbo.TblPengguna (Kode_Pengguna, Nama_Pengguna) VALUES ($Kode_Pengguna, $Nama_Pengguna)";
 $stmn = sqlsrv_query($conn, $sql_insert);  
 
- sqlsrv_execute($stmn);  
-           
+ sqlsrv_free_stmt($stmn);  
+ sqlsrv_close($conn);           
 
 }
 catch ( PDOException $e ){
