@@ -45,7 +45,9 @@ $email = $_POST['Nama_Pengguna'];
 
 // Insert data
 $sql_insert = "INSERT INTO registration_tbl (Kode_Pengguna, Nama_Pengguna) VALUES ($Kode_Pengguna,$Nama_Pengguna)";
-$sql_insert->execute();
+$stmt = $conn->prepare($sql_insert);
+
+$stmt->execute();
 }
 catch ( PDOException $e ){
   print( "Error connecting to SQL Server" );
