@@ -41,11 +41,10 @@ echo "koneksi sukses"
  try  
         {  
             $tsql = "SELECT [Nama_Pengguna] FROM dbo.TblPengguna";  
-            $getProducts = sqlsrv_query($conn, $tsql);  
-            if ($getProducts == FALSE)  
-                die(FormatErrors(sqlsrv_errors()));  
+            $getProducts = sqlsrv_query($conn, $tsql);
+        }
             
-}
+
 
 echo "koneksi sukses"
           
