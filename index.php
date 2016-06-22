@@ -26,6 +26,11 @@ NAMA PENGGUNA <input type="text" name="Nama_Pengguna" id="Nama_Pengguna"/></br>
 <input type="submit" name="submit" value="Submit" />
 </form>
 <?php
+$conn = new PDO ( "sqlsrv:server = tcp:quantumcom.database.windows.net,1433; Database = DAPURPR", "qdadmin", "Kafalahajai5654@");
+$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+catch ( PDOException $e ) {print( "Error connecting to SQL Server" );
+die(print_r($e));
+
 
 ?>
 </body>
