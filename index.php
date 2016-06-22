@@ -30,7 +30,6 @@ die(print_r($e));
 if(!empty($_POST)) {
 try {
 $Kode_Pengguna = $_POST['Kode_Pengguna'];
-
 $Nama_Pengguna = $_POST['Nama_Pengguna'];
 
 // Insert data
@@ -48,7 +47,7 @@ die(print_r($e));
 echo "<h3>Your're registered!</h3>";
 }
 // Retrieve data
-$sql_select = "SELECT * FROM dbo.TblPengguna";
+$sql_select = "SELECT Kode_Pengguna, Nama_Pengguna FROM dbo.TblPengguna";
 $stmt = $conn->query($sql_select);
 $registrants = $stmt->fetchAll();
 if(count($registrants) > 0) {
