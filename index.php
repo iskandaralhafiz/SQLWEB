@@ -30,25 +30,52 @@ Try
 {
 $conn = new PDO ( "sqlsrv:server = tcp:quantumcom.database.windows.net,1433; Database = DAPURPR", "qdadmin", "Kafalahajai5654@");
 $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-$Kode_Pengguna = $_POST['Kode_Pengguna'];
-$Nama_Pengguna = $_POST['Nama_Pengguna'];
-
-// Insert data
-$sql_insert = "INSERT INTO dbo.TblPengguna (Kode_Pengguna, Nama_Pengguna) VALUES ('$Kode_Pengguna', '$Nama_Pengguna')";
-$stmn = sqlsrv_query($conn, $sql_insert); 
-
-sqlsrv_free_stmt($stmn); 
-sqlsrv_close($conn); 
-  
-
 }
 catch ( PDOException $e ){
   print( "Error connecting to SQL Server" );
 die(print_r($e));
 }
 
-echo "koneksi sukses"
-      
+// Insert registration info
+if(!empty($_POST)) {
+try {
+$Kode_Pengguna = $_POST['Kode_Pengguna'];
+$Nama_Pengguna = $_POST['Nama_Pengguna'];
+
+// Insert data
+$sql_insert = "INSERT INTO dbo.TblPengguna (Kode_Pengguna, Nama_Pengguna)
+VALUES (?,?)";
+$stmt = $conn->prepare($sql_insert);
+$stmt->bindValue(1, $Kode_Penguna);
+$stmt->bindValue(2, $Nama_Pengguna);
+$stmt->execute();
+}
+catch(PDOException $e) {
+   print( "Error connecting to SQL Server" );
+die(print_r($e));
+}
+echo "<h3>Your're registered!</h3>";
+}
+
+// Retrieve data
+$sql_select = "SELECT * FROM dbo.TblPengguna";
+$stmt = $conn->query($sql_select);
+$registrants = $stmt->fetchAll();
+if(count($registrants) > 0) {
+echo "<h2>People who are registered:</h2>";
+echo "<table>";
+echo "<tr><th>Kode_Pengguna</th>";
+echo "<th>Nama_Pengguna</th></tr>";
+foreach($registrants as $registrant) {
+echo "<tr><td>".$registrant['Kode_Pengguna']."</td>";
+echo "<td>".$registrant['Nama_Pengguna']."</td></tr>";
+
+}
+echo "</table>";
+} else {
+echo "<h3>No one is currently registered.</h3>";
+}
+
 ?>
 </body>
 </html>
