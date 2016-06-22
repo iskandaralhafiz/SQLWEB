@@ -37,16 +37,17 @@ die(print_r($e));
 }
 
 echo "koneksi sukses"
-
- try  
-        {  
             $tsql = "SELECT [Nama_Pengguna] FROM dbo.TblPengguna";  
-            $getProducts = sqlsrv_query($conn, $tsql);
-        }
+           sqlsrv_query($conn, $tsql);
+        
             
+catch ( PDOException $e ){
+  print( "Error connecting to SQL Server" );
+die(print_r($e));
+}
 
 
-echo "koneksi sukses"
+
           
 ?>
 </body>
