@@ -45,7 +45,7 @@ $Nama_Pengguna = $_POST['Nama_Pengguna'];
 
 // Insert data
 $sql_insert = "INSERT INTO registration_tbl (Kode_Pengguna, Nama_Pengguna) VALUES ($Kode_Pengguna,$Nama_Pengguna)";
-$stmt = mssql_query($sql_insert);
+$stmt = $conn->mssql_query($sql_insert);
 
 $stmt->execute();
 }
