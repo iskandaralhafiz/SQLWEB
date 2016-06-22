@@ -38,10 +38,6 @@ die(print_r($e));
 
 echo "koneksi sukses"
 
-catch ( PDOException $e ){
-  print( "Error connecting to SQL Server" );
-die(print_r($e));
-}
 
 
 
