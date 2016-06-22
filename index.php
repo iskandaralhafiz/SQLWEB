@@ -28,13 +28,13 @@ NAMA <input type="text" name="Nama_Pengguna" id="Nama_Pengguna"/></br>
 // DB connection info
 //TODO: Update the values for $host, $user, $pwd, and $db
 //using the values you retrieved earlier from the portal.
-$host = "quantumcom.database.windows.net,1433 ;
+$host = "tcp:quantumcom.database.windows.net,1433 ;
 $user = "qdadmin";
 $pwd = "Kafalahajai5654@";
 $db = "DAPURPR";
 // Connect to database.
 try {
-$conn = new PDO( "sqlsrv:server=$host;dbname=$db", $user, $pwd);
+$conn = new PDO( "sqlsrv:server=$host;database=$db", $user, $pwd);
 $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 }
 catch(PDOException $e){
