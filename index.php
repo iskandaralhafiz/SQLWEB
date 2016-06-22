@@ -1,58 +1,85 @@
 <html>
-<body>
- 
-<p><p>
- 
-<?php
- 
-// contoh pertama yang kita gunakan, phpversion ini adalah
- 
-// sebuah fungsi yang akan menampilkan versi PHP yang anda gunakan
- 
-phpversion();
- 
-// berikutnya, kita coba menampilkan kode HTML
- 
-// ke browser untuk membentuk
- 
-// layout halaman yang kita tampilkan.
- 
-// Dalam kasus contoh kali ini, kita akan menggunakan tag <p>,
- 
-// tag <p> dapat diletakkan
- 
-// dalam baris print yang sama seperti saat kita menuliskan
- 
-// teks "Anda berada di situs prothelon.com"
- 
-// di antara teks phpversion dan
- 
-// hal-hal lain di baris sesudahnya.
- 
-print ("<p>"); /* tag <p> digunakan untuk membuat paragraf
- 
-baru*/
- 
-print ("Anda adalah pak haji AKMAL KAN berada di situs www.quantumdinamika.com");
- 
-print ("<p>");
- 
-/* fungsi "phpinfo" berikut ini akan menampilkan sebuah halaman
- 
-yang panjang yang memberikan kita informasi mengenai
- 
-konfigurasi
- 
-versi PHP yang kita gunakan. Ini akan sangat berguna saat kita
- 
-melakukan troubleshooting nantinya */
- 
-phpinfo();
- 
-?>
- 
-</body>
- 
-</html>
- 
+<head>
+<Title>Registration Form</Title>
+<style type="text/css">
+body { background-color: #fff; border-top: solid 10px #000;
+color: #333; font-size: .85em; margin: 20; padding: 20;
+font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+}
+h1, h2, h3,{ color: #000; margin-bottom: 0; padding-bottom: 0; }
+h1 { font-size: 2em; }
+h2 { font-size: 1.75em; }
+h3 { font-size: 1.2em; }
+table { margin-top: 0.75em; }
+th { font-size: 1.2em; text-align: left; border: none; padding-left: 0; }
+td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
+</style>
 
+</head>
+<body>
+<h1>ENTRI DATA USER di sini!</h1>
+<p>Fill in your name and email address, then click <strong>Submit</strong> to register.</p>
+<form method="post" action="index.php">
+ID PENGGUNA <input type="text" name="Kode_Pengguna" id="Kode_Pengguna"/></br>
+NAMA <input type="text" name="Nama_Pengguna" id="Nama_Pengguna"/></br>
+<input type="submit" name="submit" value="Submit" />
+</form>
+<?php
+// DB connection info
+//TODO: Update the values for $host, $user, $pwd, and $db
+//using the values you retrieved earlier from the portal.
+$host = "quantumcom.database.windows.net,1433 ;
+$user = "qdadmin";
+$pwd = "Kafalahajai5654@";
+$db = "DAPURPR";
+// Connect to database.
+try {
+$conn = new PDO( "sqlsrv:server=$host;dbname=$db", $user, $pwd);
+$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+}
+catch(PDOException $e){
+die(print_r($e));
+}
+// Insert registration info
+if(!empty($_POST)) {
+try {
+$Kode_Pengguna = $_POST['Kode_Pengguna'];
+
+$Nama_Pengguna = $_POST['Nama_Pengguna'];
+
+// Insert data
+$sql_insert = "INSERT INTO dbo.TblPengguna (Kode_Pengguna, Nama_Pengguna)
+VALUES (?,?)";
+$stmt = $conn->prepare($sql_insert);
+$stmt->bindValue(1, $Kode_Pengguna);
+$stmt->bindValue(2, $Nama_Pengguna);
+
+$stmt->execute();
+}
+catch(PDOException $e) {
+die(print_r($e));
+}
+echo "<h3>Your're registered!</h3>";
+}
+// Retrieve data
+$sql_select = "SELECT * FROM dbo.TblPengguna";
+$stmt = $conn->query($sql_select);
+$registrants = $stmt->fetchAll();
+if(count($registrants) > 0) {
+echo "<h2>People who are registered:</h2>";
+echo "<table>";
+echo "<tr><th>Name</th>";
+echo "<th>Email</th>";
+foreach($registrants as $registrant) {
+echo "<tr><td>".$registrant['Kode_Pengguna']."</td>";
+echo "<td>".$registrant['Nama_Pengguna']."</td>";
+
+
+}
+echo "</table>";
+} else {
+echo "<h3>No one is currently registered.</h3>";
+}
+?>
+</body>
+</html>
