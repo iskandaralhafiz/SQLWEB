@@ -36,6 +36,8 @@ $tsql = "SELECT [Nama_Pengguna] FROM dbo.TblPengguna";
               
                 echo($row['Nama_Pengguna']);  
                 echo("<br/>");  
+sqlsrv_free_stmt($getProducts);  
+            sqlsrv_close($conn);  
 
 }
 catch ( PDOException $e ){
