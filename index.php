@@ -30,6 +30,9 @@ Try
 {
 $conn = new PDO ( "sqlsrv:server = tcp:quantumcom.database.windows.net,1433; Database = DAPURPR", "qdadmin", "Kafalahajai5654@");
 $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+$tsql = "SELECT [Nama_Pengguna] FROM dbo.TblPengguna";  
+           sqlsrv_query($conn, $tsql);
+
 }
 catch ( PDOException $e ){
   print( "Error connecting to SQL Server" );
@@ -37,18 +40,7 @@ die(print_r($e));
 }
 
 echo "koneksi sukses"
-            $tsql = "SELECT [Nama_Pengguna] FROM dbo.TblPengguna";  
-           sqlsrv_query($conn, $tsql);
-        
-            
-catch ( PDOException $e ){
-  print( "Error connecting to SQL Server" );
-die(print_r($e));
-}
-
-
-
-          
+      
 ?>
 </body>
 </html>
