@@ -44,7 +44,7 @@ $Kode_Pengguna = $_POST['Kode_Pengguna'];
 $Nama_Pengguna = $_POST['Nama_Pengguna'];
 
 // Insert data
-$sql_insert = "INSERT INTO dbo.TblPengguna (Kode_Pengguna, Nama_Pengguna) 
+$sql_insert = "INSERT INTO TblPengguna (Kode_Pengguna, Nama_Pengguna) 
 VALUES (?,?)";
 $stmt = $conn->prepare($sql_insert);
 $stmt->bindValue(1, Kode_Pengguna);
