@@ -44,10 +44,10 @@ $Nama_Pengguna = $_POST['Nama_Pengguna'];
 
 // Insert data
 $sql_insert = "INSERT INTO dbo.TblPengguna (Kode_Pengguna, Nama_Pengguna)
-VALUES (?,?)";
+VALUES ('$Kode_Pengguna', '$Nama_Pengguna)";
 $stmt = $conn->prepare($sql_insert);
-$stmt->bindValue(1, $Kode_Penguna);
-$stmt->bindValue(2, $Nama_Pengguna);
+//$stmt->bindValue(1, $Kode_Penguna);
+//$stmt->bindValue(2, $Nama_Pengguna);
 $stmt->execute();
 }
 catch(PDOException $e) {
