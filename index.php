@@ -40,8 +40,8 @@ echo "koneksi sukses"
 
 if(!empty($_POST)) {
 try {
-$name = $_POST['Kode_Pengguna'];
-$email = $_POST['Nama_Pengguna'];
+$Kode_Pengguna = $_POST['Kode_Pengguna'];
+$Nama_Pengguna = $_POST['Nama_Pengguna'];
 
 // Insert data
 $sql_insert = "INSERT INTO registration_tbl (Kode_Pengguna, Nama_Pengguna) VALUES ($Kode_Pengguna,$Nama_Pengguna)";
