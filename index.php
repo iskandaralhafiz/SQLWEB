@@ -30,14 +30,16 @@ Try
 {
 $conn = new PDO ( "sqlsrv:server = tcp:quantumcom.database.windows.net,1433; Database = DAPURPR", "qdadmin", "Kafalahajai5654@");
 $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-$tsql = "SELECT [Nama_Pengguna] FROM dbo.TblPengguna";  
- $getProducts = sqlsrv_query($conn, $tsql);
- while($row = sqlsrv_fetch_array($getProducts, SQLSRV_FETCH_ASSOC))  
-              
-                echo($row['Nama_Pengguna']);  
-                echo("<br/>");  
-sqlsrv_free_stmt($getProducts);  
-            sqlsrv_close($conn);  
+$Kode_Pengguna = $_POST['Kode_Pengguna'];
+$Nama_Pengguna = $_POST['Nama_Pengguna'];
+
+// Insert data
+$sql_insert = "INSERT INTO dbo.TblPengguna (Kode_Pengguna, Nama_Pengguna) VALUES ('$Kode_Pengguna', '$Nama_Pengguna')";
+$stmn = sqlsrv_query($conn, $sql_insert); 
+
+sqlsrv_free_stmt($stmn); 
+sqlsrv_close($conn); 
+  
 
 }
 catch ( PDOException $e ){
