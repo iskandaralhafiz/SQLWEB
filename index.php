@@ -16,7 +16,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 </style>
 </head>
 <body>
-<h1>APE CHAN PAK HAJI .....?</h1>
+<h1>APE CHAN PAK HAJI IDUL ADHA.....?</h1>
 <p>Fill in your name and email address, then click <strong>Submit</strong> to register.</p>
 <form method="post" action="index.php">
 ID PENGGUNA <input type="text" name="Kode_Pengguna" id="Kode_Pengguna"/></br>
