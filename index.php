@@ -28,7 +28,7 @@ NAMA PENGGUNA <input type="text" name="Nama_Pengguna" id="Nama_Pengguna"/></br>
 <?php
 Try 
 {
-$conn = new PDO ( "sqlsrv:server = tcp:quantumcom.database.windows.net,1433; Database = DAPURPR", "qdadmin", "Kafalahajai5654@");
+$conn = new PDO ( "sqlsrv:server = tcp:quantumcom.database.windows.net,1433; Database = SIMTIFDB", "qdadmin", "Kafalahajai5654@");
 $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 }
 catch ( PDOException $e ){
