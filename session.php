@@ -3,8 +3,8 @@
 //$connection = mysql_connect("localhost", "root", "");
 Try 
 {
-$connection = new PDO ( "sqlsrv:server = tcp:quantumcom.database.windows.net,1433; Database = SIMTIFDB", "qdadmin", "Kafalahajai5654@");
-$connection->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+$conn = new PDO ( "sqlsrv:server = tcp:quantumcom.database.windows.net,1433; Database = SIMTIFDB", "qdadmin", "Kafalahajai5654@");
+$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 }
 catch ( PDOException $e ){
   print( "Error connecting to SQL Server" );
@@ -18,11 +18,11 @@ session_start();// Memulai Session
 // Menyimpan Session
 $user_check=$_SESSION['login_user'];
 // Ambil nama karyawan berdasarkan username karyawan dengan mysql_fetch_assoc
-$ses_sql=mssql_query("select Nama_Pengguna from TblPengguna1 where username='$user_check'", $connection);
+$ses_sql=mssql_query("select Nama_Pengguna from TblPengguna1 where username='$user_check'", $conn);
 $row = mssql_fetch_assoc($ses_sql);
 $login_session =$row['Nama_Pengguna'];
 if(!isset($login_session)){
-mssql_close($connection); // Menutup koneksi
+mssql_close($conn); // Menutup koneksi
 header('Location: index.php'); // Mengarahkan ke Home Page
 }
 ?>
