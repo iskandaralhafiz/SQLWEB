@@ -11,24 +11,34 @@ else
 $username=$_POST['username'];
 $password=$_POST['password'];
 // Membangun koneksi ke database
-$connection = mysql_connect("localhost", "root", "");
+//$connection = mysql_connect("localhost", "root", "");
+  Try 
+{
+$conn = new PDO ( "sqlsrv:server = tcp:quantumcom.database.windows.net,1433; Database = SIMTIFDB", "qdadmin", "Kafalahajai5654@");
+$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+}
+catch ( PDOException $e ){
+  print( "Error connecting to SQL Server" );
+die(print_r($e));
+}
+  
 // Mencegah MySQL injection 
 $username = stripslashes($username);
 $password = stripslashes($password);
-$username = mysql_real_escape_string($username);
-$password = mysql_real_escape_string($password);
+$username = mssql_real_escape_string($username);
+$password = mssql_real_escape_string($password);
 // Seleksi Database
-$db = mysql_select_db("tes_db", $connection);
+//$db = mssql_select_db("tes_db", $connection);
 // SQL query untuk memeriksa apakah karyawan terdapat di database?
-$query = mysql_query("select * from karyawan where pass_karyawan='$password' AND user_karyawan='$username'", $connection);
-$rows = mysql_num_rows($query);
+$query = mssql_query("select * from TblPengguna1 where password='$password' AND username='$username'", $connection);
+$rows = mssql_num_rows($query);
 if ($rows == 1) {
 $_SESSION['login_user']=$username; // Membuat Sesi/session
 header("location: profile.php"); // Mengarahkan ke halaman profil
 } else {
 $error = "Username atau Password belum terdaftar";
 }
-mysql_close($connection); // Menutup koneksi
+mssql_close($connection); // Menutup koneksi
 }
 }
 ?>
