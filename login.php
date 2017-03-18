@@ -14,8 +14,8 @@ $password=$_POST['password'];
 //$connection = mysql_connect("localhost", "root", "");
   Try 
 {
-$connection = new PDO ( "sqlsrv:server = tcp:quantumcom.database.windows.net,1433; Database = SIMTIFDB", "qdadmin", "Kafalahajai5654@");
-$connection->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+$conn = new PDO ( "sqlsrv:server = tcp:quantumcom.database.windows.net,1433; Database = SIMTIFDB", "qdadmin", "Kafalahajai5654@");
+$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 }
 catch ( PDOException $e ){
   print( "Error connecting to SQL Server" );
@@ -30,7 +30,7 @@ $password = mssql_real_escape_string($password);
 // Seleksi Database
 //$db = mssql_select_db("tes_db", $connection);
 // SQL query untuk memeriksa apakah karyawan terdapat di database?
-$query = mssql_query("select * from TblPengguna1 where password='$password' AND username='$username'", $connection);
+$query = mssql_query("select * from TblPengguna1 where password='$password' AND username='$username'", $conn);
 $rows = mssql_num_rows($query);
 if ($rows == 1) {
 $_SESSION['login_user']=$username; // Membuat Sesi/session
@@ -38,7 +38,7 @@ header("location: profile.php"); // Mengarahkan ke halaman profil
 } else {
 $error = "Username atau Password belum terdaftar";
 }
-mssql_close($connection); // Menutup koneksi
+mssql_close($conn); // Menutup koneksi
 }
 }
 ?>
