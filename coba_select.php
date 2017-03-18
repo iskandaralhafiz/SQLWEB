@@ -21,9 +21,9 @@ if( sqlsrv_fetch( $stmt ) === false) {
 
 // Get the row fields. Field indeces start at 0 and must be retrieved in order.
 // Retrieving row fields by name is not supported by sqlsrv_get_field.
-$name = sqlsrv_get_field( $stmt, 0);
-echo "$name: ";
+$username = sqlsrv_get_field( $stmt, 0);
+echo "$username: ";
 
-$comment = sqlsrv_get_field( $stmt, 1);
-echo $comment;
+$password = sqlsrv_get_field( $stmt, 1);
+echo $password;
 ?> 
