@@ -1,17 +1,28 @@
 <?php
 // Membangun Koneksi dengan Server dengan nama server, user_id dan password sebagai parameter
-$connection = mysql_connect("localhost", "root", "");
+//$connection = mysql_connect("localhost", "root", "");
+Try 
+{
+$connection = new PDO ( "sqlsrv:server = tcp:quantumcom.database.windows.net,1433; Database = SIMTIFDB", "qdadmin", "Kafalahajai5654@");
+$connection->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+}
+catch ( PDOException $e ){
+  print( "Error connecting to SQL Server" );
+die(print_r($e));
+}
+
+
 // Seleksi Database
-$db = mysql_select_db("tes_db", $connection);
+//$db = mssql_select_db("tes_db", $connection);
 session_start();// Memulai Session
 // Menyimpan Session
 $user_check=$_SESSION['login_user'];
 // Ambil nama karyawan berdasarkan username karyawan dengan mysql_fetch_assoc
-$ses_sql=mysql_query("select nama_karyawan from karyawan where user_karyawan='$user_check'", $connection);
-$row = mysql_fetch_assoc($ses_sql);
-$login_session =$row['nama_karyawan'];
+$ses_sql=mssql_query("select Nama_Pengguna from TblPengguna1 where username='$user_check'", $connection);
+$row = mssql_fetch_assoc($ses_sql);
+$login_session =$row['Nama_Pengguna'];
 if(!isset($login_session)){
-mysql_close($connection); // Menutup koneksi
+mssql_close($connection); // Menutup koneksi
 header('Location: index.php'); // Mengarahkan ke Home Page
 }
 ?>
