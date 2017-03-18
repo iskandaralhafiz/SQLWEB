@@ -19,7 +19,7 @@ header("location: profile.php");
 	<div class="container">
 		<div class="main">
 	      <form action="" method="post">
-			<h2>LOGIN 3UP TEAM Bengkalis For Indnesia</h2><hr/>		
+			<h2>LOGIN 3UP TEAM            Bengkalis For Indnesia</h2><hr/>		
 			
 			<label>Username :</label>
 			<input id="name" name="username" placeholder="username" type="text">
