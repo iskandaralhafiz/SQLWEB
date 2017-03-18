@@ -7,7 +7,8 @@ if( $conn === false ) {
 }
 
 $sql = "SELECT username, password
-        FROM TblPengguna1";
+        FROM TblPengguna1
+        WHERE Kode_Pengguna='002'";
         
 $stmt = sqlsrv_query( $conn, $sql);
 if( $stmt === false ) {
