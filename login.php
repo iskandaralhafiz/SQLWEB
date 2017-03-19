@@ -24,8 +24,8 @@ $password=$_POST['password'];
 // Mencegah MySQL injection 
 $username = stripslashes($username);
 $password = stripslashes($password);
-$username = mssql_real_escape_string($username);
-$password = mssql_real_escape_string($password);
+$username = sqlsrv_real_escape_string($username);
+$password = sqlsrv_real_escape_string($password);
 // Seleksi Database
 //$db = mssql_select_db("tes_db", $connection);
 // SQL query untuk memeriksa apakah karyawan terdapat di database?
@@ -35,12 +35,13 @@ $password = mssql_real_escape_string($password);
   $sql = "SELECT * FROM TblPengguna1 WHERE password='$password' AND username='$username'"; 
           
  $stmt = sqlsrv_query( $conn, $sql); 
+  $rows = sqlsrv_num_rows($stmt);
  if( $stmt === false ) { 
       die( print_r( sqlsrv_errors(), true)); 
  } 
 
   
-if ($stmt == 1) {
+if ($rows == 1) {
 $_SESSION['login_user']=$username; // Membuat Sesi/session
 header("location: profile.php"); // Mengarahkan ke halaman profil
 } else {
