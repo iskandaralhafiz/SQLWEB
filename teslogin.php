@@ -15,7 +15,7 @@ else {
  $stmt = sqlsrv_query( $conn, $sql); 
   $row_count = sqlsrv_num_rows( $stmt); 
    
-if ( $row_count === false) {
+if ( $row_count>0) {
    echo "Error in retrieveing row count.";
 }
  else {
