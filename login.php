@@ -1,9 +1,9 @@
 <?php
 session_start(); // Memulai Session
-$error=''; // Variabel untuk menyimpan pesan error
+//$error=''; // Variabel untuk menyimpan pesan error
 if (isset($_POST['submit'])) {
 if (empty($_POST['username']) || empty($_POST['password'])) {
-$error = "Username or Password is invalid";
+echo "Username or Password is invalid";
 }
   
 else
@@ -34,18 +34,18 @@ $password = sqlsrv_real_escape_string($password);
 //$query = mssql_query("select * from TblPengguna1 where password='$password' AND username='$username'", $conn);
 //$rows = mssql_num_rows($query);
   
-  $sql = "SELECT * FROM TblPengguna1 WHERE password='$password' AND username='$username'"; 
+  $sql = "SELECT * FROM TblPengguna1 WHERE Password='$password' AND username='$username'"; 
           
  $stmt = sqlsrv_query( $conn, $sql); 
-  $rows = sqlsrv_num_rows($stmt); 
+  $row_count = sqlsrv_num_rows($stmt); 
    
-if ($rows == 1) {
+if ($row_count>0) {
  
 $_SESSION['login_user']=$username; // Membuat Sesi/session
 header("location: profile.php"); // Mengarahkan ke halaman profil
 } else {
   
-$error = "Username atau Password belum terdaftar";
+echo "Username atau Password belum terdaftar";
 }
   
 sqlsrv_close( $conn ); // Menutup koneksi
