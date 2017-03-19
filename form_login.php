@@ -10,10 +10,7 @@ http-equiv="content-type">
 <body>
 <img style="width: 268px; height: 118px;" alt="" src="LOGO3.png"
 font-size:="" font-family:="" color:=""><span
-style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(0, 176, 80);"></span><span
-style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(89, 89, 89);"></span><span
-style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(89, 89, 89);"></span><br>
-<span
+
 style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(0, 176, 80);"></span><span
 style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(89, 89, 89);">BENGKALIS
 FOR INDONESIA </span><br>
