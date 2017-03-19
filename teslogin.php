@@ -13,11 +13,12 @@ else {
  $stmt = sqlsrv_query( $conn, $sql); 
   $rows = sqlsrv_num_rows($stmt); 
    
-if ($rows === false)
+if ($rows === false) {
    echo "Error in retrieveing row count.";
-else
+}
+ else {
    echo $rows;
-
+ }
 
 //if ($rows == 1) {
  //echo "ada row";
