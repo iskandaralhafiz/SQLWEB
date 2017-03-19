@@ -21,7 +21,7 @@ if ( $row_count == 1) {
  else {
    echo "ape dah";
   $error = "Username atau Password belum terdaftar";
-  echo "$error: ";
+  echo "$row_count: ";
  }
 
 //if ($rows == 1) {
