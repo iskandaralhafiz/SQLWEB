@@ -16,8 +16,6 @@ style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(89, 89,
 <span
 style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(0, 176, 80);"></span><span
 style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(89, 89, 89);"></span><br>
-<br>
-	  
 	<!-- Skrip CSS -->
    <link rel="stylesheet" href="style.css"/>
   
