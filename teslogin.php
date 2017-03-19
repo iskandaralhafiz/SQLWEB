@@ -11,13 +11,13 @@ else {
   $sql = "SELECT * FROM TblPengguna1 WHERE Password='ajai' AND username='iskandar'"; 
           
  $stmt = sqlsrv_query( $conn, $sql); 
-  $rows = sqlsrv_num_rows($stmt); 
+  $row_count = sqlsrv_num_rows($stmt); 
    
-if ($rows === false) {
+if ($row_count === false) {
    echo "Error in retrieveing row count.";
 }
  else {
-   echo $rows;
+   echo $row_count;
  }
 
 //if ($rows == 1) {
