@@ -1,5 +1,4 @@
 <?php
-echo "hai";
 session_start(); // Memulai Session
 $error=''; // Variabel untuk menyimpan pesan error
 if (isset($_POST['submit'])) {
@@ -23,10 +22,10 @@ $password=$_POST['password'];
 
   
 // Mencegah MySQL injection 
-$username = stripslashes($username);
-$password = stripslashes($password);
-$username = sqlsrv_real_escape_string($username);
-$password = sqlsrv_real_escape_string($password);
+//$username = stripslashes($username);
+//$password = stripslashes($password);
+//$username = sqlsrv_real_escape_string($username);
+//$password = sqlsrv_real_escape_string($password);
 // Seleksi Database
 //$db = mssql_select_db("tes_db", $connection);
 // SQL query untuk memeriksa apakah karyawan terdapat di database?
