@@ -35,18 +35,18 @@ $password = sqlsrv_real_escape_string($password);
   $sql = "SELECT * FROM TblPengguna1 WHERE password='$password' AND username='$username'"; 
           
  $stmt = sqlsrv_query( $conn, $sql); 
-  $rows = sqlsrv_num_rows($stmt);
- if( $stmt === false ) { 
-      die( print_r( sqlsrv_errors(), true)); 
- } 
-
-  
+  $rows = sqlsrv_num_rows($stmt); 
+   
 if ($rows == 1) {
 $_SESSION['login_user']=$username; // Membuat Sesi/session
 header("location: profile.php"); // Mengarahkan ke halaman profil
 } else {
 $error = "Username atau Password belum terdaftar";
 }
+  
+ if( $stmt === false ) { 
+      die( print_r( sqlsrv_errors(), true)); 
+ } 
 sqlsrv_close( $conn ); // Menutup koneksi
 }
 }
