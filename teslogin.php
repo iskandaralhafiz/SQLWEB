@@ -10,10 +10,10 @@ else {
 }
   $sql = "SELECT * FROM TblPengguna1 WHERE Password='ajai' AND username='iskandar'"; 
           
- $stmt = sqlsrv_query( $conn, $sql, array()); 
-  $row_count = sqlsrv_num_rows($stmt); 
+ $stmt = sqlsrv_query( $conn, $sql); 
+  $row_count = sqlsrv_num_rows( $stmt); 
    
-if ($row_count === false) {
+if ( $row_count === false) {
    echo "Error in retrieveing row count.";
 }
  else {
@@ -27,4 +27,4 @@ if ($row_count === false) {
 //$error = "Username atau Password belum terdaftar";
 }
   
-sqlsrv_close( $conn ); // Menutup koneksi
+sqlsrv_close( $conn); // Menutup koneksi
