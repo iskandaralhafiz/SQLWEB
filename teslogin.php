@@ -13,11 +13,11 @@ else {
  $stmt = sqlsrv_query( $conn, $sql, array()); 
   $row_count = sqlsrv_num_rows( $stmt); 
    
-if ( $row_count === 1) {
+if ( $row_count == 1) {
    echo "Error in retrieveing row count.";
 }
  else {
-   echo $row_count;
+   echo "ape dah";
  }
 
 //if ($rows == 1) {
