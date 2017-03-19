@@ -30,7 +30,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 <body>
 <h1>3UP TEAM BENGKALIS FOR INDONESIA</h1>
 <p>Isi data anda di sini, kemudian click <strong>Submit</strong> untuk register.</p>
-<form method="post" action="index.php">
+<form method="post" action="home.php">
 ID PENGGUNA <input type="text" name="Kode_Pengguna" id="Kode_Pengguna"/></br>
 
 NAMA PENGGUNA <input type="text" name="Nama_Pengguna" id="Nama_Pengguna"/></br>
