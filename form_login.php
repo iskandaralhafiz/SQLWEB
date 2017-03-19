@@ -9,13 +9,14 @@ http-equiv="content-type">
 </head>
 <body>
 <img style="width: 268px; height: 118px;" alt="" src="LOGO3.png"
-font-size:="" font-family:="" color:=""><br>
-<span
-style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(0, 176, 80);">BENGKALIS</span><span
-style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(146, 208, 80);">
-</span><span
-style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(89, 89, 89);">FOR INDONESIA</span><span
+font-size:="" font-family:="" color:=""><span
+style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(0, 176, 80);"></span><span
+style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(89, 89, 89);"></span><span
 style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(89, 89, 89);"></span><br>
+<span
+style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(0, 176, 80);"></span><span
+style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(89, 89, 89);">BENGKALIS
+FOR INDONESIA </span><br>
 <big style="font-family: Calibri Light; color: rgb(102, 102, 102);"><font
 size="-1"><big>www.3upteam.com|e-mail:iskhan_alhafiz@yahoo.com|WA:
 +6281363120816|Penakluk|Petarung| Pemeang</big></font></big><br>
