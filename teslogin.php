@@ -5,7 +5,7 @@ $serverName = "quantumcom.database.windows.net";
  if( $conn === false ) { 
       die( print_r( sqlsrv_errors(), true)); 
  }   
-  $sql = "SELECT * FROM TblPengguna1 WHERE password='$password' AND username='$username'"; 
+  $sql = "SELECT * FROM TblPengguna1 WHERE password='ajai' AND username='iskandar'"; 
           
  $stmt = sqlsrv_query( $conn, $sql); 
   $rows = sqlsrv_num_rows($stmt); 
