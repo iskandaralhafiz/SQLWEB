@@ -25,6 +25,6 @@ if ( $row_count === false) {
 //} else {
  // echo "tak ado";
 //$error = "Username atau Password belum terdaftar";
-}
+
   
 sqlsrv_close( $conn); // Menutup koneksi
