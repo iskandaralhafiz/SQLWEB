@@ -13,10 +13,16 @@ else {
  $stmt = sqlsrv_query( $conn, $sql); 
   $rows = sqlsrv_num_rows($stmt); 
    
-if ($rows == 1) {
- echo "ada row";
-} else {
-  echo "tak ado";
+if ($rows === false)
+   echo "Error in retrieveing row count.";
+else
+   echo $rows;
+
+
+//if ($rows == 1) {
+ //echo "ada row";
+//} else {
+ // echo "tak ado";
 //$error = "Username atau Password belum terdaftar";
 }
   
