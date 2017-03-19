@@ -10,7 +10,7 @@ else {
 }
   $sql = "SELECT username, Password FROM TblPengguna1"; 
           
- $stmt = sqlsrv_query( $conn, $sql); 
+ $stmt = sqlsrv_query( $conn, $sql, array()); 
   $row_count = sqlsrv_num_rows( $stmt); 
    
 if ( $row_count === false) {
