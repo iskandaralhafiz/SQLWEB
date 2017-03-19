@@ -1,11 +1,11 @@
 <?php
-echo "hai";
 session_start(); // Memulai Session
 $error=''; // Variabel untuk menyimpan pesan error
 if (isset($_POST['submit'])) {
 if (empty($_POST['username']) || empty($_POST['password'])) {
 $error = "Username or Password is invalid";
 }
+  
 else
 {
 // Variabel username dan password
@@ -23,10 +23,11 @@ $password=$_POST['password'];
 
   
 // Mencegah MySQL injection 
-//$username = stripslashes($username);
-//$password = stripslashes($password);
-//$username = sqlsrv_real_escape_string($username);
-//$password = sqlsrv_real_escape_string($password);
+$username = stripslashes($username);
+$password = stripslashes($password);
+$username = sqlsrv_real_escape_string($username);
+$password = sqlsrv_real_escape_string($password);
+  
 // Seleksi Database
 //$db = mssql_select_db("tes_db", $connection);
 // SQL query untuk memeriksa apakah karyawan terdapat di database?
@@ -39,17 +40,14 @@ $password=$_POST['password'];
   $rows = sqlsrv_num_rows($stmt); 
    
 if ($rows == 1) {
-  echo "ada row";
-//$_SESSION['login_user']=$username; // Membuat Sesi/session
-//header("location: profile.php"); // Mengarahkan ke halaman profil
+ 
+$_SESSION['login_user']=$username; // Membuat Sesi/session
+header("location: profile.php"); // Mengarahkan ke halaman profil
 } else {
-  echo "tak ada wor";
-//$error = "Username atau Password belum terdaftar";
+  
+$error = "Username atau Password belum terdaftar";
 }
   
- if( $stmt === false ) { 
-      die( print_r( sqlsrv_errors(), true)); 
- } 
 sqlsrv_close( $conn ); // Menutup koneksi
 }
 }
