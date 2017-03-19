@@ -1,4 +1,6 @@
 <?php
+
+$error=''; // Variabel untuk menyimpan pesan error
 $serverName = "quantumcom.database.windows.net"; 
  $connectionInfo = array( "Database"=>"SIMTIFDB", "UID"=>"qdadmin", "PWD"=>"Kafalahajai5654@"); 
  $conn = sqlsrv_connect( $serverName, $connectionInfo); 
@@ -18,6 +20,7 @@ if ( $row_count == 1) {
 }
  else {
    echo "ape dah";
+  $error = "Username atau Password belum terdaftar";
  }
 
 //if ($rows == 1) {
