@@ -1,4 +1,5 @@
 <?php
+echo "hai";
 session_start(); // Memulai Session
 $error=''; // Variabel untuk menyimpan pesan error
 if (isset($_POST['submit'])) {
@@ -38,10 +39,12 @@ $password=$_POST['password'];
   $rows = sqlsrv_num_rows($stmt); 
    
 if ($rows == 1) {
-$_SESSION['login_user']=$username; // Membuat Sesi/session
-header("location: profile.php"); // Mengarahkan ke halaman profil
+  echo "ada row";
+//$_SESSION['login_user']=$username; // Membuat Sesi/session
+//header("location: profile.php"); // Mengarahkan ke halaman profil
 } else {
-$error = "Username atau Password belum terdaftar";
+  echo "tak ada wor";
+//$error = "Username atau Password belum terdaftar";
 }
   
  if( $stmt === false ) { 
