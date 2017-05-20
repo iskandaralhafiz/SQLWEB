@@ -12,7 +12,7 @@
 
 <html>
 <head>
-<Title>Registration Form</Title>
+<Title>ENTRI PROBLEM RUMAH TANGGA</Title>
 <style type="text/css">
 body { background-color: #fff; border-top: solid 10px #000;
 color: #333; font-size: .85em; margin: 20; padding: 20;
@@ -28,12 +28,12 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 </style>
 </head>
 <body>
-<h1>3UP TEAM BENGKALIS FOR INDONESIA</h1>
-<p>Isi data anda di sini, kemudian click <strong>Submit</strong> untuk register.</p>
+<h1>QLS INDONESIA | ENTRI PROBLEMATIKA RUMAH TANGGA</h1>
+<p>Isi data anda di sini, kemudian click <strong>Submit</strong> untuk Mengirim Masukan Anda.</p>
 <form method="post" action="home.php">
-ID PENGGUNA <input type="text" name="Kode_Pengguna" id="Kode_Pengguna"/></br>
+STATUS <input type="text" name="Kode_Pengguna" id="Kode_Pengguna"/></br>
 
-NAMA PENGGUNA <input type="text" name="Nama_Pengguna" id="Nama_Pengguna"/></br>
+PROBLEMATIKA  <input type="text" name="Nama_Pengguna" id="Nama_Pengguna"/></br>
 
 <input type="submit" name="submit" value="Submit" />
 </form>
