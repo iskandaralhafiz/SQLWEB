@@ -28,12 +28,15 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 </style>
 </head>
 <body>
-<h1>QLS INDONESIA | ENTRI PROBLEMATIKA RUMAH TANGGA</h1>
+<h2>QLS INDONESIA | ENTRI PROBLEMATIKA RUMAH TANGGA</h2>
 <p>Isi data anda di sini, kemudian click <strong>Submit</strong> untuk Mengirim Masukan Anda.</p>
 <form method="post" action="home.php">
-STATUS <input type="text" name="Kode_Pengguna" id="Kode_Pengguna"/></br>
+ <pre>
+STATUS        :<input type="text" name="Kode_Pengguna" row="40" cols="40" id="Kode_Pengguna"/></br>
 
-PROBLEMATIKA  <input type="text" name="Nama_Pengguna" id="Nama_Pengguna"/></br>
+ PROBLEMATIKAR :<Textarea  name="Kode_Pengguna" row="40" cols="40" id="Kode_Pengguna"/></textarea> </br> 
+
+PROBLEMATIKA  :<input type="text" name="Nama_Pengguna" id="Nama_Pengguna"/></br>
 
 <input type="submit" name="submit" value="Submit" />
 </form>
