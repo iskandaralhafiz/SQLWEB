@@ -5,7 +5,7 @@
 	
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
-<title>coba design1</title>
+<title>Form Login</title>
 </head>
 <body>
 <img style="width: 862px; height: 192px;" alt="" src="logofinal1.PNG"
@@ -19,7 +19,7 @@ style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(89, 89,
 	<!-- Skrip CSS -->
    <link rel="stylesheet" href="style.css"/>
   
-  </head>	
+	</head>	
   <body>
 	<div class="container">
 		<div class="main">
