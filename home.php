@@ -1,7 +1,7 @@
 <?php
  session_start();
  if (empty($_SESSION['username'])) {
- header("location:form_login.php"); // jika belum login, maka dikembalikan ke file form_login.php
+ header("location:index.php"); // jika belum login, maka dikembalikan ke file form_login.php
  }
  else {
  ?>
