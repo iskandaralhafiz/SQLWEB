@@ -31,7 +31,11 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 <p>Isi data anda di sini, kemudian click <strong>Submit</strong> untuk Mengirim Masukan Anda.</p>
 <form method="post" action="home.php">
  <pre>
-STATUS       :<input type="text" name="status" row="40" cols="40" id="status"/></br>
+STATUS       :<select  name="status">
+<option value ="Suami">Suami
+<option value ="Istri">Istri
+</select>
+</br>
 PROBLEMATIKA :<Textarea  name="isi_sms" row="40" cols="40" id="isi_sms"/></textarea> </br> 
 
 <input type="submit" name="submit" value="Submit" />
