@@ -73,7 +73,7 @@ $sql_select = "SELECT * FROM dbo.Tbl_SAKINAH";
 $stmt = $conn->query($sql_select);
 $registrants = $stmt->fetchAll();
 if(count($registrants) > 0) {
-echo "<h2>People who are registered:</h2>";
+echo "<h2>HASIL SURVEY PROBLEMATIKA RUMAH TANGGA:</h2>";
 echo "<table>";
 echo "<tr><th>STATUS</th>";
 echo "<th>PROBLEMATIKA</th></tr>";
