@@ -24,7 +24,7 @@ style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(89, 89,
 	<div class="container">
 		<div class="main">
 	      <form action="proses_login.php" method="post">
-			<h4>LOGIN QLS | Dauroh Keluarga</h2><hr/>		
+			<h4>LOGIN QLS | Dauroh Keluarga</h4><hr/>		
 			
 			<label>Username :</label>
 			<input id="name" name="username" placeholder="username" type="text">
