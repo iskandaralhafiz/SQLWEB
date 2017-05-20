@@ -30,8 +30,9 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 <h2>QLS INDONESIA | ENTRI PROBLEMATIKA RUMAH TANGGA</h2>
 <p>Isi data anda di sini, kemudian click <strong>Submit</strong> untuk Mengirim Masukan Anda.</p>
 <form method="post" action="home.php">
- STATUS        :<input type="text" name="Kode_Pengguna" row="40" cols="40" id="Kode_Pengguna"/></br>
-PROBLEMATIKAR :<Textarea  name="Kode_Pengguna" row="40" cols="40" id="Kode_Pengguna"/></textarea> </br> 
+ <pre>
+STATUS       :<input type="text" name="status" row="40" cols="40" id="status"/></br>
+PROBLEMATIKA :<Textarea  name="isi_sms" row="40" cols="40" id="isi_sms"/></textarea> </br> 
 
 <input type="submit" name="submit" value="Submit" />
 </form>
@@ -49,12 +50,12 @@ die(print_r($e));
 // Insert registration info
 if(!empty($_POST)) {
 try {
-$Kode_Pengguna = $_POST['Kode_Pengguna'];
-$Nama_Pengguna = $_POST['Nama_Pengguna'];
+$status = $_POST['status'];
+$isi_sms = $_POST['isi_sms'];
 
 // Insert data
-$sql_insert = "INSERT INTO dbo.TblPengguna (Kode_Pengguna, Nama_Pengguna)
-VALUES ('$Kode_Pengguna', '$Nama_Pengguna')";
+$sql_insert = "INSERT INTO dbo.Tbl_SAKINAH (status, isi_sms)
+VALUES ('$status', '$isi_sms')";
 $stmt = $conn->prepare($sql_insert);
 //$stmt->bindValue(1, $Kode_Penguna);
 //$stmt->bindValue(2, $Nama_Pengguna);
@@ -64,26 +65,26 @@ catch(PDOException $e) {
    print( "Error connecting to SQL Server" );
 die(print_r($e));
 }
-echo "<h3>Your're registered!</h3>";
+echo "<h3>Data berhasil dirkirim!</h3>";
 }
 
 // Retrieve data
-$sql_select = "SELECT * FROM dbo.TblPengguna";
+$sql_select = "SELECT * FROM dbo.Tbl_SAKINAH";
 $stmt = $conn->query($sql_select);
 $registrants = $stmt->fetchAll();
 if(count($registrants) > 0) {
 echo "<h2>People who are registered:</h2>";
 echo "<table>";
-echo "<tr><th>Kode_Pengguna</th>";
-echo "<th>Nama_Pengguna</th></tr>";
+echo "<tr><th>STATUS</th>";
+echo "<th>PROBLEMATIKA</th></tr>";
 foreach($registrants as $registrant) {
-echo "<tr><td>".$registrant['Kode_Pengguna']."</td>";
-echo "<td>".$registrant['Nama_Pengguna']."</td></tr>";
+echo "<tr><td>".$registrant['status']."</td>";
+echo "<td>".$registrant['isi_sms']."</td></tr>";
 
 }
 echo "</table>";
 } else {
-echo "<h3>No one is currently registered.</h3>";
+echo "<h3>Data Gagal dikirim.</h3>";
 }
 
 ?>
