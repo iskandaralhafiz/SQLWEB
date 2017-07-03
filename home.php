@@ -87,6 +87,10 @@ TPS       : <select id="tbl_tps1" name="tbl_tps1">
             
             CALON 1
             <input name="C1" type="text" size="10" maxlength="10">
+            CALON 2
+            <input name="C2" type="text" size="10" maxlength="10">
+            CALON 3
+            <input name="C3" type="text" size="10" maxlength="10">
  </form>
  <script src="jquery-1.10.2.min.js"></script>
         <script src="jquery.chained.min.js"></script>
