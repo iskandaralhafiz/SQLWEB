@@ -38,8 +38,9 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
   <!--KECAMATAN-->
             <select id="KECAMATAN" name="KECAMATAN">
                 <option value="">Please Select</option>
-                <?php
-                $query = sqlsrv_query("SELECT KODE_KEC, KECAMATAN FROM tbl_kecamatan ORDER BY KODE_KEC");
+                <?php 
+             $perintah="SELECT KODE_KEC, KECAMATAN FROM tbl_kecamatan ORDER BY KODE_KEC";
+                $query = sqlsrv_query($conn,$perintah);
                 while ($row = sqlsrv_fetch_array($query)) {
                 ?>
                     <option value="<?php echo $row['KODE_KEC']; ?>">
