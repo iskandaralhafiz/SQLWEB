@@ -65,8 +65,7 @@ Desa      : <select id="tbl_desa" name="tbl_desa">
                 ?>
             </select>
 
-<!--TPS-->
-TPS       : <select id="tbl_tps1" name="tbl_tps1">
+<!--TPS-->TPS       : <select id="tbl_tps1" name="tbl_tps1">
                 <option value="">Please Select</option>
                 <?php 
              $perintah2="SELECT * FROM tbl_tps1 INNER JOIN tbl_desa ON tbl_tps1.DESA = tbl_desa.KODE_DESA ORDER BY KODE_TPS";
@@ -115,12 +114,13 @@ die(print_r($e));
 // Insert registration info
 if(!empty($_POST)) {
 try {
-$status = $_POST['status'];
-$isi_sms = $_POST['isi_sms'];
+$C1 = $_POST['C1'];
+$C2 = $_POST['C2'];
+$C3 = $_POST['C3'];
 
 // Insert data
-$sql_insert = "INSERT INTO dbo.Tbl_SAKINAH (status, isi_sms)
-VALUES ('$status', '$isi_sms')";
+$sql_insert = "INSERT INTO dbo.tbl_pemilu (C1,C2,C3)
+VALUES ('$C1', '$C2',$C3)";
 $stmt = $conn->prepare($sql_insert);
 //$stmt->bindValue(1, $Kode_Penguna);
 //$stmt->bindValue(2, $Nama_Pengguna);
@@ -133,24 +133,7 @@ die(print_r($e));
 echo "<h3>Data berhasil dirkirim!</h3>";
 }
 
-// Retrieve data
-$sql_select = "SELECT * FROM dbo.Tbl_SAKINAH";
-$stmt = $conn->query($sql_select);
-$registrants = $stmt->fetchAll();
-if(count($registrants) > 0) {
-echo "<h2>HASIL SURVEY PROBLEMATIKA RUMAH TANGGA:</h2>";
-echo "<table>";
-echo "<tr><th>STATUS</th>";
-echo "<th>PROBLEMATIKA</th></tr>";
-foreach($registrants as $registrant) {
-echo "<tr><td>".$registrant['status']."</td>";
-echo "<td>".$registrant['isi_sms']."</td></tr>";
 
-}
-echo "</table>";
-} else {
-echo "<h3>Data Gagal dikirim.</h3>";
-}
 
 ?>
 </body>
