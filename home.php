@@ -55,7 +55,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
             <select id="DESA" name="DESA">
                 <option value="">Please Select</option>
                 <?php
-             $perintah="SELECT KODE_DESA, DESA FROM tbl_desa INNER JOIN tbl_kecamatan ON tbl_desa.KECAMATAN = tbl_kecamatan.KODE_KEC ORDER BY DESA");
+             $perintah="SELECT KODE_DESA, DESA FROM tbl_desa ORDER BY DESA");
                 $query = sqlsrv_query($conn,$perintah);
                 while ($row = sqlsrv_fetch_array($query)) {
                 ?>
