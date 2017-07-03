@@ -61,7 +61,7 @@ Desa      : <select id="tbl_desa" name="tbl_desa">
                     </option>
 
 <?php
-                }
+sqlsrv_close($conn);                }
                 ?>
             </select>
 
@@ -81,7 +81,7 @@ Desa      : <select id="tbl_desa" name="tbl_desa">
                 ?>
             </select>
 _____________________________________________
-/            CALON 1
+            CALON 1
             <input name="C1" type="text" size="10" maxlength="10">
             CALON 2
             <input name="C2" type="text" size="10" maxlength="10">
@@ -122,7 +122,7 @@ $TPS = $_POST['tbl_tps1'];
 // Insert data
 $sql_insert = "INSERT INTO dbo.tbl_pemilu (C1,C2,C3) VALUES ('$C1', '$C2',$C3) WHERE KODE_TPS=$TPS";
 $query3 = sqlsrv_query($conn,$sql_insert);
- sqlsrv_execute($query3);
+ //sqlsrv_execute($query3);
 //$stmt = $conn->prepare($sql_insert);
 //$stmt->bindValue(1, $Kode_Penguna);
 //$stmt->bindValue(2, $Nama_Pengguna);
@@ -135,7 +135,7 @@ die(print_r($e));
 echo "<h3>Data berhasil dirkirim!</h3>";
 }
 
-
+sqlsrv_close($conn);
 
 ?>
 </body>
