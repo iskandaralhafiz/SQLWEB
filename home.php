@@ -39,8 +39,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
   <!--KECAMATAN-->
 <select id="tbl_kecamatan" name="tbl_kecamatan">
                 <option value="">Please Select</option>
-                <?php 
-             $perintah="SELECT KODE_KEC, KECAMATAN FROM tbl_kecamatan ORDER BY KODE_KEC";
+                <?php              $perintah="SELECT KODE_KEC, KECAMATAN FROM tbl_kecamatan ORDER BY KODE_KEC";
                 $query = sqlsrv_query($conn,$perintah);
                 while ($row = sqlsrv_fetch_array($query)) {
                 ?>
@@ -80,7 +79,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
                 while ($row2 = sqlsrv_fetch_array($query2)) {
                 ?>
                     <option id="tbl_tps1" class="<?php echo $row2['KODE_DESA']; ?>" value="<?php echo $row2['KODE_TPS']; ?>">
-                        <?php echo $row2['TPS']; ?>
+                       <?php echo $row2['KODE_TPS']; ?>
 
                     </option>
                 <?php
