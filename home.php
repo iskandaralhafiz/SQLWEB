@@ -64,7 +64,8 @@ Desa      : <select id="tbl_desa" name="tbl_desa">
                 }
                 ?>
             </select>
-     <!--TPS-->
+
+<!--TPS-->
 TPS       : <select id="tbl_tps1" name="tbl_tps1">
                 <option value="">Please Select</option>
                 <?php 
@@ -88,6 +89,9 @@ _____________________________________________
             CALON 3
             <input name="C3" type="text" size="10" maxlength="10">
 _____________________________________________
+
+            <input type="submit" name="submit" value="KIRIM">
+
  </form>
  <script src="jquery-1.10.2.min.js"></script>
         <script src="jquery.chained.min.js"></script>
