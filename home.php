@@ -87,7 +87,13 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
                 }
                 ?>
             </select>
-        </form>
+ </form>
+ <script src="jquery-1.10.2.min.js"></script>
+        <script src="jquery.chained.min.js"></script>
+        <script>
+            $("#kota").chained("#provinsi");
+            $("#kecamatan").chained("#kota");
+        </script>
 
 
 <?php
