@@ -26,7 +26,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 </style>
  </head>
 <body>
-<h2>SIMTIF PILGUB | ENTRI PEROLEHAN SUARA TPS</h2>
+<h3>SIMTIF PILGUB | ENTRI PEROLEHAN SUARA TPS</h3>
 <p>Isi data di sini, kemudian click <strong>Submit</strong> untuk Mengirim SUARA TPS.</p>
  
  <?php
