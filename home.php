@@ -24,8 +24,7 @@ table { margin-top: 0.75em; }
 th { font-size: 1.2em; text-align: left; border: none; padding-left: 0; }
 td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 </style>
- </head>
-<body>
+ </head><body>
 <h3>SIMTIF PILGUB | ENTRI PEROLEHAN SUARA TPS</h3>
 <p>Isi data di sini, kemudian click <strong>Submit</strong> untuk Mengirim SUARA TPS.</p>
  
@@ -35,8 +34,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  
 <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
  
-<form method="post" action="home.php">
- <pre>
+<form method="post" action="home.php"> <pre>
   <!--KECAMATAN-->
 Kecamatan : <select id="tbl_kecamatan" name="tbl_kecamatan">
                 <option value="">Please Select</option>
@@ -46,8 +44,7 @@ Kecamatan : <select id="tbl_kecamatan" name="tbl_kecamatan">
                 ?>
                     <option value="<?php echo $row['KODE_KEC']; ?>">
                         <?php echo $row['KECAMATAN']; ?>
-                    </option>
-                <?php
+                    </option>                <?php
                 }
                 ?>
             </select>
@@ -57,8 +54,7 @@ Desa      : <select id="tbl_desa" name="tbl_desa">
                 <?php 
              $perintah1="SELECT * FROM tbl_desa INNER JOIN tbl_kecamatan ON tbl_desa.KECAMATAN = tbl_kecamatan.KODE_KEC ORDER BY KODE_DESA";
                 $query1 = sqlsrv_query($conn,$perintah1);
-                while ($row1 = sqlsrv_fetch_array($query1)) {
-                ?>
+                while ($row1 = sqlsrv_fetch_array($query1)) {                ?>
                     <option id="tbl_desa" class="<?php echo $row1['KODE_KEC']; ?>" value="<?php echo $row1['KODE_DESA']; ?>">
                         <?php echo $row1['DESA']; ?>
 
@@ -84,13 +80,14 @@ TPS       : <select id="tbl_tps1" name="tbl_tps1">
                 }
                 ?>
             </select>
-______________________________________________________________________
+_____________________________________________
             CALON 1
             <input name="C1" type="text" size="10" maxlength="10">
             CALON 2
             <input name="C2" type="text" size="10" maxlength="10">
             CALON 3
             <input name="C3" type="text" size="10" maxlength="10">
+_____________________________________________
  </form>
  <script src="jquery-1.10.2.min.js"></script>
         <script src="jquery.chained.min.js"></script>
