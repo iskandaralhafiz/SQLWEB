@@ -59,7 +59,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
                 $query = sqlsrv_query($conn,$perintah);
                 while ($row = sqlsrv_fetch_array($query)) {
                 ?>
-                    <option id="DESA" class="<?php echo $row['KECAMATAN']; ?>" value="<?php echo $row['KODE_DESA']; ?>">
+                    <option id="DESA" class="<?php echo $row['KODE_KEC']; ?>" value="<?php echo $row['KODE_DESA']; ?>">
                         <?php echo $row['DESA']; ?>
                     </option>
                 <?php
@@ -72,8 +72,8 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  <script src="jquery-1.10.2.min.js"></script>
         <script src="jquery.chained.min.js"></script>
         <script>
-            $("#kota").chained("#provinsi");
-            $("#kecamatan").chained("#kota");
+            $("#tbl_desa").chained("#tbl_kecamatan");
+            $("#tbl_tps1").chained("#tbl_desa");
         </script>
 
 
