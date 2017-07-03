@@ -12,6 +12,7 @@ session_start();
 
 <html>
 <head>
+ <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
 <Title>ENTRI PEROLEHAN SUARA TPS</Title>
 <style type="text/css">
 body { background-color: #fff; border-top: solid 10px #000;
