@@ -35,7 +35,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 
 <form method="post" action="home.php">
   <!--KECAMATAN-->
-            <select id="KECAMATAN" name="KECAMATAN">
+            <select id="KECAMATAN" name="KECAMATAN" onChange='this.form.submit()'>
                 <option value="">Please Select</option>
                 <?php 
              $perintah="SELECT KODE_KEC, KECAMATAN FROM tbl_kecamatan ORDER BY KODE_KEC";
