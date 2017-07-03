@@ -1,5 +1,5 @@
 .container {
-	width: 50%;
+	width: auto;
     margin: 0 auto;
 }
 
@@ -36,7 +36,7 @@ hr{
 }
  
 div.main{
- width: 306px;
+ width: 206px;
  padding: 10px 50px 30px;
  border: 2px solid gray;
  font-family: raleway;
