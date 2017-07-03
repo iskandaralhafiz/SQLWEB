@@ -37,7 +37,6 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  
 <form method="post" action="home.php">
  <pre>
-
   <!--KECAMATAN-->
 Kecamatan : <select id="tbl_kecamatan" name="tbl_kecamatan">
                 <option value="">Please Select</option>
@@ -52,7 +51,6 @@ Kecamatan : <select id="tbl_kecamatan" name="tbl_kecamatan">
                 }
                 ?>
             </select>
- 
  <!--DESA-->
 Desa      : <select id="tbl_desa" name="tbl_desa">
                 <option value="">Please Select</option>
@@ -65,12 +63,12 @@ Desa      : <select id="tbl_desa" name="tbl_desa">
                         <?php echo $row1['DESA']; ?>
 
                     </option>
-                <?php
+
+<?php
                 }
                 ?>
             </select>
-    
- <!--TPS-->
+     <!--TPS-->
 TPS       : <select id="tbl_tps1" name="tbl_tps1">
                 <option value="">Please Select</option>
                 <?php 
@@ -86,6 +84,7 @@ TPS       : <select id="tbl_tps1" name="tbl_tps1">
                 }
                 ?>
             </select>
+            
  </form>
  <script src="jquery-1.10.2.min.js"></script>
         <script src="jquery.chained.min.js"></script>
