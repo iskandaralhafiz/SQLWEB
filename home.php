@@ -101,19 +101,19 @@ _____________________________________________
 
 
 <?php
-Try 
-{
- $conn = new PDO ( "sqlsrv:server = tcp:quantumcom.database.windows.net,1433; Database = SIMTIFDB", "qdadmin", "Kafalahajai5654@");
-$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-}
-catch ( PDOException $e ){
-print( "Error connecting to SQL Server" );
-die(print_r($e));
-}
+//Try 
+//{
+// $conn = new PDO ( "sqlsrv:server = tcp:quantumcom.database.windows.net,1433; Database = SIMTIFDB", "qdadmin", "Kafalahajai5654@");
+//$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+//}
+//catch ( PDOException $e ){
+//print( "Error connecting to SQL Server" );
+//die(print_r($e));
+//}
 
 // Insert registration info
 if(!empty($_POST)) {
-try {
+//try {
 $C1 = $_POST['C1'];
 $C2 = $_POST['C2'];
 $C3 = $_POST['C3'];
@@ -127,13 +127,14 @@ sqlsrv_execute($query3);
 //$stmt->bindValue(1, $Kode_Penguna);
 //$stmt->bindValue(2, $Nama_Pengguna);
 //$stmt->execute();
+//}
+//catch(PDOException $e) {
+  // print( "Error connecting to SQL Server" );
+//die(print_r($e));
+ echo "<h3>Data berhasil dirkirim!</h3>";
 }
-catch(PDOException $e) {
-   print( "Error connecting to SQL Server" );
-die(print_r($e));
-}
-echo "<h3>Data berhasil dirkirim!</h3>";
-}
+ echo "<h3>PENGIRIMAN DATA GAGAL!</h3>";
+//}
 
 sqlsrv_close($conn);
 
