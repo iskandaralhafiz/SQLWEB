@@ -1,5 +1,5 @@
 .container {
-	width: 50%;
+	width: 100%;
     margin: 0 auto;
 }
 
@@ -25,7 +25,7 @@ span{
 } 
 
 b{
- color:green;
+ color:blue;
 }
 
 hr{
@@ -40,7 +40,7 @@ div.main{
  padding: 10px 50px 30px;
  border: 2px solid gray;
  font-family: raleway;
- float:left;
+ float:center;
  margin-top:15px;
 }
  
