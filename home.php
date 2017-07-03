@@ -37,7 +37,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  
 <form method="post" action="home.php">
   <!--KECAMATAN-->
-            <select id="kecamatan" name="kecamatan">
+<select id="tbl_kecamatan" name="tbl_kecamatan">
                 <option value="">Please Select</option>
                 <?php 
              $perintah="SELECT KODE_KEC, KECAMATAN FROM tbl_kecamatan ORDER BY KODE_KEC";
@@ -54,16 +54,13 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  
  <!--DESA-->
 
-            <select id="desa" name="desa">
-                
-         
-             
+            <select id="tbl_desa" name="tbl_desa"            
  <script>
     
-    $("#kecamatan").change(function(){
+    $("#tbl_kecamatan").change(function(){
     
         // variabel dari nilai combo box provinsi
-        var KODE_KEC = $("#kecamatan").val();
+        var KODE_KEC = $("#tbl_kecamatan").val();
         
         // tampilkan image load
         $("#imgLoad").show("");
@@ -83,7 +80,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
                 
                 // jika dapat mengambil data,, tampilkan di combo box kota
                 else{
-                    $("#desa").html(msg);                                                      
+                    $("#tbl_desa").html(msg);                                                      
                 }
                 
                 // hilangkan image load
