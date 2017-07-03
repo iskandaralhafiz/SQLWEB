@@ -54,43 +54,21 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  
  <!--DESA-->
 
-            <select id="tbl_desa" name="tbl_desa"            
- <script>
-    
-    $("#tbl_kecamatan").change(function(){
-    
-        // variabel dari nilai combo box provinsi
-        var KODE_KEC = $("#tbl_kecamatan").val();
-        
-        // tampilkan image load
-        $("#imgLoad").show("");
-        
-        // mengirim dan mengambil data
-        $.ajax({
-            type: "POST",
-            dataType: "html",
-            url: "cari_desa.php",
-            data: "kec="+KODE_KEC,
-            success: function(msg){
-                
-                // jika tidak ada data
-                if(msg == ''){
-                    alert('Tidak ada data Kota');
-                }
-                
-                // jika dapat mengambil data,, tampilkan di combo box kota
-                else{
-                    $("#tbl_desa").html(msg);                                                      
-                }
-                
-                // hilangkan image load
-                $("#imgLoad").hide();
-            }
-        });     
-    });
-</script>
+            <select id="tbl_desa" name="tbl_desa">
+                <option value="">Please Select</option>
+                <?php 
+             $perintah1="SELECT * FROM tbl_desa INNER JOIN tbl_kecamatan ON tbl_desa.KECAMATAN = tbl_kecamatan.KODE_KEC ORDER BY KODE_DESA";
+                $query1 = sqlsrv_query($conn,$perintah1);
+                while ($row1 = sqlsrv_fetch_array($query1)) {
+                ?>
+                    <option id="tbl_desa" class="<?php echo $row1['KODE_KEC']; ?>" value="<?php echo $row1['KODE_DESA']; ?>">
+                        <?php echo $row1['DESA']; ?>
 
-    </select>
+                    </option>
+                <?php
+                }
+                ?>
+            </select>
     
  </form>
  <script src="jquery-1.10.2.min.js"></script>
