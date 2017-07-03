@@ -83,8 +83,9 @@ TPS       : <select id="tbl_tps1" name="tbl_tps1">
                 <?php
                 }
                 ?>
-            </select>
-            
+            </select>">
+             CALON 1
+             <input name="C1" type="text" size="30" maxlength="30">
  </form>
  <script src="jquery-1.10.2.min.js"></script>
         <script src="jquery.chained.min.js"></script>
