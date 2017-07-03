@@ -25,7 +25,7 @@ table { margin-top: 0.75em; }
 th { font-size: 1.2em; text-align: left; border: none; padding-left: 0; }
 td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 </style>
-</head>
+ </head>
 <body>
 <h2>SIMTIF PILGUB | ENTRI PEROLEHAN SUARA TPS</h2>
 <p>Isi data di sini, kemudian click <strong>Submit</strong> untuk Mengirim SUARA TPS.</p>
@@ -55,11 +55,11 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
             <select id="DESA" name="DESA">
                 <option value="">Please Select</option>
                 <?php
-             $perintah="SELECT KODE_DESA, DESA FROM tbl_desa JOIN tbl_kecamatan ON tbl_desa.KECAMATAN = tbl_kecamatan.KODE_KEC ORDER BY DESA");
+             $perintah="SELECT KODE_DESA, DESA FROM tbl_desa INNER JOIN tbl_kecamatan ON tbl_desa.KECAMATAN = tbl_kecamatan.KODE_KEC ORDER BY DESA");
                 $query = sqlsrv_query($conn,$perintah);
                 while ($row = sqlsrv_fetch_array($query)) {
                 ?>
-                    <option id="DESA" class="<?php echo $row['KODE_KEC']; ?>" value="<?php echo $row['KODE_DESA']; ?>">
+                    <option value="<?php echo $row['KODE_DESA']; ?>">
                         <?php echo $row['DESA']; ?>
                     </option>
                 <?php
