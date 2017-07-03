@@ -70,6 +70,23 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
                 ?>
             </select>
     
+ <!--TPS-->
+
+            <select id="tbl_tps1" name="tbl_tps1">
+                <option value="">Please Select</option>
+                <?php 
+             $perintah2="SELECT * FROM tbl_tps1 INNER JOIN tbl_desa ON tbl_tps1.DESA = tbl_desa.KODE_DESA ORDER BY KODE_TPS";
+                $query2 = sqlsrv_query($conn,$perintah2);
+                while ($row2 = sqlsrv_fetch_array($query2)) {
+                ?>
+                    <option id="tbl_tps1" class="<?php echo $row2['KODE_DESA']; ?>" value="<?php echo $row2['KODE_TPS']; ?>">
+                        <?php echo $row2['TPS']; ?>
+
+                    </option>
+                <?php
+                }
+                ?>
+            </select>
  </form>
  <script src="jquery-1.10.2.min.js"></script>
         <script src="jquery.chained.min.js"></script>
