@@ -132,9 +132,9 @@ sqlsrv_execute($query3);
   // print( "Error connecting to SQL Server" );
 //die(print_r($e));
  echo "<h3>Data berhasil dirkirim!</h3>";
-}
+}else {
  echo "<h3>PENGIRIMAN DATA GAGAL!</h3>";
-//}
+}
 
 sqlsrv_close($conn);
 
