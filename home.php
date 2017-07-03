@@ -101,15 +101,15 @@ _____________________________________________
 
 
 <?php
-Try 
-{
-$conn = new PDO ( "sqlsrv:server = tcp:quantumcom.database.windows.net,1433; Database = SIMTIFDB", "qdadmin", "Kafalahajai5654@");
-$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-}
-catch ( PDOException $e ){
-  print( "Error connecting to SQL Server" );
-die(print_r($e));
-}
+//Try 
+//{
+ //$conn = new PDO ( "sqlsrv:server = tcp:quantumcom.database.windows.net,1433; Database = SIMTIFDB", "qdadmin", "Kafalahajai5654@");
+//$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+//}
+//catch ( PDOException $e ){
+ // print( "Error connecting to SQL Server" );
+//die(print_r($e));
+//}
 
 // Insert registration info
 if(!empty($_POST)) {
@@ -120,7 +120,7 @@ $C3 = $_POST['C3'];
 $TPS = $_POST['tbl_tps1']; 
 
 // Insert data
-$sql_insert = "INSERT INTO dbo.tbl_pemilu1 (KODE_TPS,C1,C2,C3) VALUES ('$TPS',''$C1', '$C2','$C3')";
+$sql_insert = "INSERT INTO dbo.tbl_pemilu1 (KODE_TPS,C1,C2,C3) VALUES ('$TPS','$C1', '$C2','$C3')";
 $query3 = sqlsrv_query($conn,$sql_insert);
 sqlsrv_execute($query3);
 //$stmt = $conn->prepare($sql_insert);
