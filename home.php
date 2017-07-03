@@ -1,5 +1,5 @@
 <?php
- session_start();
+session_start();
  if (empty($_SESSION['username'])) {
  header("location:index.php"); // jika belum login, maka dikembalikan ke file form_login.php
  }
@@ -55,11 +55,11 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
             <select id="DESA" name="DESA">
                 <option value="">Please Select</option>
                 <?php
-                $query = sqlsrv_query("SELECT
-                                    KODE_DESA, DESA
+             $perintah="SELECT KODE_DESA, DESA
                                   FROM
                                     tbl_desa
                                     INNER JOIN tbl_kecamatan ON tbl_desa.KECAMATAN = tbl_kecamatan.KODE_KEC ORDER BY DESA");
+                $query = sqlsrv_query($conn,$perintah);
                 while ($row = sqlsrv_fetch_array($query)) {
                 ?>
                     <option id="DESA" class="<?php echo $row['KODE_KEC']; ?>" value="<?php echo $row['KODE_DESA']; ?>">
@@ -74,11 +74,11 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
             <select id="TPS" name="TPS">
                 <option value="">Please Select</option>
                 <?php
-                $query = sqlsrv_query("SELECT
-                                        KODE_TPS, TPS
+             $perintah="SELECT KODE_TPS, TPS
                                       FROM
                                         tbl_tps1
                                         INNER JOIN tbl_desa ON tbl_tps1.DESA = tbl_desa.KODE_DESA ORDER BY KODE_TPS");
+                $query = sqlsrv_query($conn,$perintah);
                 while ($row = sqlsrv_fetch_array($query)) {
                 ?>
                     <option id="TPS" class="<?php echo $row['KODE_DESA']; ?>" value="<?php echo $row['KODE_TPS']; ?>">
