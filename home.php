@@ -120,9 +120,9 @@ $C3 = $_POST['C3'];
 $TPS = $_POST['tbl_tps1']; 
 
 // Insert data
-$sql_insert = "INSERT INTO dbo.tbl_pemilu (KODE_TPS,C1,C2,C3) VALUES ('$TPS',$C1, $C2,$C3)";
+$sql_insert = "INSERT INTO dbo.tbl_pemilu (KODE_TPS,C1,C2,C3) VALUES ('$TPS',''$C1', '$C2','$C3')";
 $query3 = sqlsrv_query($conn,$sql_insert);
- //sqlsrv_execute($query3);
+sqlsrv_execute($query3);
 //$stmt = $conn->prepare($sql_insert);
 //$stmt->bindValue(1, $Kode_Penguna);
 //$stmt->bindValue(2, $Nama_Pengguna);
