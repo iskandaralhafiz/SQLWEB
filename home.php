@@ -117,10 +117,11 @@ try {
 $C1 = $_POST['C1'];
 $C2 = $_POST['C2'];
 $C3 = $_POST['C3'];
+$TPS = $_POST['tbl_tps1']; 
 
 // Insert data
-$sql_insert = "INSERT INTO dbo.tbl_pemilu (C1,C2,C3)
-VALUES ('$C1', '$C2',$C3)";
+$sql_insert = "INSERT INTO dbo.tbl_pemilu (C1,C2,C3) 
+VALUES ('$C1', '$C2',$C3) WHERE KODE_TPS=$TPS";
 $stmt = $conn->prepare($sql_insert);
 //$stmt->bindValue(1, $Kode_Penguna);
 //$stmt->bindValue(2, $Nama_Pengguna);
