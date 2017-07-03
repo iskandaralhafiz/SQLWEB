@@ -50,24 +50,22 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
                 }
                 ?>
             </select>
-            
-   <!--DESA-->
-            <select id="DESA" name="DESA">
+             
+    <!--KECAMATAN-->
+            <select id="KECAMATAN" name="KECAMATAN">
                 <option value="">Please Select</option>
-                <?php
-             $perintah1="SELECT KODE_DESA, DESA FROM tbl_desa ORDER BY DESA");
-                $query1 = sqlsrv_query($conn,$perintah1);
-                while ($row1 = sqlsrv_fetch_array($query1)) {
+                <?php 
+             $perintah="SELECT KODE_KEC, KECAMATAN FROM tbl_kecamatan ORDER BY KODE_KEC";
+                $query = sqlsrv_query($conn,$perintah);
+                while ($row = sqlsrv_fetch_array($query)) {
                 ?>
-                    <option value="<?php echo $row1['KODE_DESA']; ?>">
-                        <?php echo $row1['DESA']; ?>
+                    <option value="<?php echo $row['KODE_KEC']; ?>">
+                        <?php echo $row['KECAMATAN']; ?>
                     </option>
                 <?php
                 }
                 ?>
             </select>
-
-    
  </form>
  <script src="jquery-1.10.2.min.js"></script>
         <script src="jquery.chained.min.js"></script>
