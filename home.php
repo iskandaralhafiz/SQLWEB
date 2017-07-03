@@ -62,7 +62,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
                 $query = sqlsrv_query($conn,$perintah);
                 while ($row = sqlsrv_fetch_array($query)) {
                 ?>
-                    <option id="DESA" class="<?php echo $row['KODE_KEC']; ?>" value="<?php echo $row['KODE_DESA']; ?>">
+                    <option id="DESA" class="<?php echo $row['KECAMATAN']; ?>" value="<?php echo $row['KODE_DESA']; ?>">
                         <?php echo $row['DESA']; ?>
                     </option>
                 <?php
