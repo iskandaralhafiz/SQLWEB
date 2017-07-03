@@ -39,7 +39,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  <pre>
 
   <!--KECAMATAN-->
-  Kecamatan : <select id="tbl_kecamatan" name="tbl_kecamatan">
+Kecamatan : <select id="tbl_kecamatan" name="tbl_kecamatan">
                 <option value="">Please Select</option>
                 <?php              $perintah="SELECT KODE_KEC, KECAMATAN FROM tbl_kecamatan ORDER BY KODE_KEC";
                 $query = sqlsrv_query($conn,$perintah);
@@ -54,7 +54,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
             </select>
  
  <!--DESA-->
-Desa       : <select id="tbl_desa" name="tbl_desa">
+Desa      : <select id="tbl_desa" name="tbl_desa">
                 <option value="">Please Select</option>
                 <?php 
              $perintah1="SELECT * FROM tbl_desa INNER JOIN tbl_kecamatan ON tbl_desa.KECAMATAN = tbl_kecamatan.KODE_KEC ORDER BY KODE_DESA";
