@@ -34,7 +34,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  include "koneksi.php";
 ?>
 
-<form method="post" action="home.php">
+1<form method="post" action="home.php">
   <!--KECAMATAN-->
             <select id="KECAMATAN" name="KECAMATAN">
                 <option value="">Please Select</option>
@@ -59,8 +59,8 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
                 $query1 = sqlsrv_query($conn,$perintah1);
                 while ($row1 = sqlsrv_fetch_array($query1)) {
                 ?>
-                    <option id="DESA" class="<?php echo $row['KODE_KEC']; ?>" value="<?php echo $row['KODE_DESA']; ?>">
-                        <?php echo $row['DESA']; ?>
+                    <option id="DESA" class="<?php echo $row1['KODE_KEC']; ?>" value="<?php echo $row1['KODE_DESA']; ?>">
+                        <?php echo $row1['DESA']; ?>
 
                     </option>
                 <?php
