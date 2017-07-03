@@ -101,15 +101,15 @@ _____________________________________________
 
 
 <?php
-//Try 
-//{
- //$conn = new PDO ( "sqlsrv:server = tcp:quantumcom.database.windows.net,1433; Database = SIMTIFDB", "qdadmin", "Kafalahajai5654@");
-//$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-//}
-//catch ( PDOException $e ){
- // print( "Error connecting to SQL Server" );
-//die(print_r($e));
-//}
+Try 
+{
+ $conn = new PDO ( "sqlsrv:server = tcp:quantumcom.database.windows.net,1433; Database = SIMTIFDB", "qdadmin", "Kafalahajai5654@");
+$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+}
+catch ( PDOException $e ){
+print( "Error connecting to SQL Server" );
+die(print_r($e));
+}
 
 // Insert registration info
 if(!empty($_POST)) {
