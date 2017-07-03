@@ -84,7 +84,7 @@ TPS       : <select id="tbl_tps1" name="tbl_tps1">
                 }
                 ?>
             </select>
-            
+______________________________________________________________________
             CALON 1
             <input name="C1" type="text" size="10" maxlength="10">
             CALON 2
