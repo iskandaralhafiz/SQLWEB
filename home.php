@@ -7,7 +7,7 @@ session_start();
  ?>
  Selamat <b><?php echo $_SESSION['username'] ?></b> Berhasil Masuk <br />
  <a href="logout.php">Klik di sini</a> untuk Keluar
- <?php } ?>
+<?php } ?>
 //----------------------
 
 <html>
@@ -17,8 +17,7 @@ session_start();
 body { background-color: #fff; border-top: solid 10px #000;
 color: #333; font-size: .85em; margin: 20; padding: 20;
 font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
-}
-h1, h2, h3,{ color: #000; margin-bottom: 0; padding-bottom: 0; }h1 { font-size: 2em; }
+}h1, h2, h3,{ color: #000; margin-bottom: 0; padding-bottom: 0; }h1 { font-size: 2em; }
 h2 { font-size: 1.75em; }
 h3 { font-size: 1.2em; }
 table { margin-top: 0.75em; }
@@ -34,7 +33,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  include "koneksi.php";
 ?>
 
-1<form method="post" action="home.php">
+<form method="post" action="home.php">
   <!--KECAMATAN-->
             <select id="KECAMATAN" name="KECAMATAN">
                 <option value="">Please Select</option>
@@ -59,7 +58,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
                 $query1 = sqlsrv_query($conn,$perintah1);
                 while ($row1 = sqlsrv_fetch_array($query1)) {
                 ?>
-                    <option id="DESA" class="<?php echo $row1['KODE_KEC']; ?>" value="<?php echo $row1['KODE_DESA']; ?>">
+                    <option id="DESA" class="<?php echo $row1['KECAMATAN']; ?>" value="<?php echo $row1['KODE_DESA']; ?>">
                         <?php echo $row1['DESA']; ?>
 
                     </option>
