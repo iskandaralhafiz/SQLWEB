@@ -12,7 +12,7 @@
 
 <html>
 <head>
-<Title>ENTRI PROBLEM RUMAH TANGGA</Title>
+<Title>ENTRI PEROLEHAN SUARA TPS</Title>
 <style type="text/css">
 body { background-color: #fff; border-top: solid 10px #000;
 color: #333; font-size: .85em; margin: 20; padding: 20;
@@ -27,19 +27,69 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 </style>
 </head>
 <body>
-<h2>QLS INDONESIA | ENTRI PROBLEMATIKA RUMAH TANGGA</h2>
-<p>Isi data anda di sini, kemudian click <strong>Submit</strong> untuk Mengirim Masukan Anda.</p>
-<form method="post" action="home.php">
- <pre>
-STATUS       :<select  name="status">
-<option value ="Suami">Suami
-<option value ="Istri">Istri
-</select>
-</br>
-PROBLEMATIKA :<Textarea  name="isi_sms" row="40" cols="40" id="isi_sms"/></textarea> </br> 
+<h2>SIMTIF PILGUB | ENTRI PEROLEHAN SUARA TPS</h2>
+<p>Isi data di sini, kemudian click <strong>Submit</strong> untuk Mengirim SUARA TPS.</p>
+ 
+ <?php
+ include "koneksi.php";
+?>
 
-<input type="submit" name="submit" value="Submit" />
-</form>
+<form method="post" action="home.php">
+  <!--KECAMATAN-->
+            <select id="KECAMATAN" name="KECAMATAN">
+                <option value="">Please Select</option>
+                <?php
+                $query = sqlsrv_query("SELECT KODE_KEC, KECAMATAN FROM tbl_kecamatan ORDER BY KODE_KEC");
+                while ($row = sqlsrv_fetch_array($query)) {
+                ?>
+                    <option value="<?php echo $row['KODE_KEC']; ?>">
+                        <?php echo $row['KECAMATAN']; ?>
+                    </option>
+                <?php
+                }
+                ?>
+            </select>
+            
+            <!--DESA-->
+            <select id="DESA" name="DESA">
+                <option value="">Please Select</option>
+                <?php
+                $query = sqlsrv_query("SELECT
+                                    KODE_DESA, DESA
+                                  FROM
+                                    tbl_desa
+                                    INNER JOIN tbl_kecamatan ON tbl_desa.KECAMATAN = tbl_kecamatan.KODE_KEC ORDER BY DESA");
+                while ($row = sqlsrv_fetch_array($query)) {
+                ?>
+                    <option id="DESA" class="<?php echo $row['KODE_KEC']; ?>" value="<?php echo $row['KODE_DESA']; ?>">
+                        <?php echo $row['DESA']; ?>
+                    </option>
+                <?php
+                }
+                ?>
+            </select>
+
+            <!--TPS-->
+            <select id="TPS" name="TPS">
+                <option value="">Please Select</option>
+                <?php
+                $query = sqlsrv_query("SELECT
+                                        KODE_TPS, TPS
+                                      FROM
+                                        tbl_tps1
+                                        INNER JOIN tbl_desa ON tbl_tps1.DESA = tbl_desa.KODE_DESA ORDER BY KODE_TPS");
+                while ($row = sqlsrv_fetch_array($query)) {
+                ?>
+                    <option id="TPS" class="<?php echo $row['KODE_DESA']; ?>" value="<?php echo $row['KODE_TPS']; ?>">
+                        <?php echo $row['TPS']; ?>
+                    </option>
+                <?php
+                }
+                ?>
+            </select>
+        </form>
+
+
 <?php
 Try 
 {
