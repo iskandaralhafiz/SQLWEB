@@ -61,7 +61,7 @@ Desa      : <select id="tbl_desa" name="tbl_desa">
                     </option>
 
 <?php
-sqlsrv_close($conn);                }
+      }
                 ?>
             </select>
 
