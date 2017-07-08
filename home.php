@@ -35,28 +35,26 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
  
 <form method="post" action="home.php"> 
-   <table style="text-align: left; width: 401px; height: 194px;"
+  <table style="text-align: left; width: 401px; height: 194px;"
  border="0" cellpadding="2" cellspacing="2">
     <tbody>      <tr>
-        <td colspan="2" rowspan="1"
+      <td colspan="2" rowspan="1"
  style="width: 119px; background-color: rgb(153, 0, 0);"><span
  style="color: white;">ENTRI PENJUALAN</span></td>
       </tr>
    <tr>
         <td style="width: 119px;">No Faktur</td>
-        <td style="width: 297px;"><input size="30"
- name="NoFaktur"></td>
+        <td style="width: 297px;"><input size="30"name="NoFaktur"></td>
       </tr>
       <tr>
-        <td style="width: 119px;">Tanggal</td>
+       <td style="width: 119px;">Tanggal</td>
         <td style="width: 297px;"><input size="30"
  name="Tanggal"></td>
-      </tr>
+     </tr>
       <tr>
         <td style="width: 119px;">Pelanggan</td>
         <td style="width: 297px;">
-        <select name="Pelanggan">
-        </select>
+        <select name="Pelanggan">        </select>
         </td>
       </tr>
       <tr>
@@ -65,7 +63,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  value="Reset Form Penjualan" type="reset"></td>
       </tr>
     </tbody>
-  </table>
+ </table>
   <table style="text-align: left; width: 620px; height: 60px;"
  border="0" cellpadding="2" cellspacing="2">
     <tbody>
@@ -78,8 +76,8 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
       </tr>
       <tr>
         <td style="width: 170px;">
-        <select id="TblBarang" name="TblBarang">
-                <option value="">Please Select</option>
+        <select id="TblBarang" name="TblBarang" onChange='this.form.submit()'>
+                <option value="">Please Select</option> 
                 <?php              $perintah="SELECT KODE_BARANG, Nama_Barang,Harga_Jual FROM TblBarang ORDER BY KODE_BARANG";
                 $query = sqlsrv_query($conn,$perintah);
                 while ($row = sqlsrv_fetch_array($query)) {
@@ -91,8 +89,10 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
                 ?>
         <br>
         </td>
+        </Select>
+   </form>
         <td style="width: 79px;"><input size="15" 
- name="Harga" value="<?php echo $row['Harga_Jual']; ?>">
+ name="Harga" value="mantap">
 
        
        </td>
