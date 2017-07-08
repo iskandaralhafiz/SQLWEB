@@ -80,7 +80,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
         <td style="width: 170px;">
         <select id="TblBarang" name="TblBarang">
                 <option value="">Please Select</option>
-                <?php              $perintah="SELECT KODE_BARANG, Nama_Barang FROM TblBarang ORDER BY KODE_BARANG";
+                <?php              $perintah="SELECT KODE_BARANG, Nama_Barang,Harga_Jual FROM TblBarang ORDER BY KODE_BARANG";
                 $query = sqlsrv_query($conn,$perintah);
                 while ($row = sqlsrv_fetch_array($query)) {
                 ?>
@@ -91,8 +91,12 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
                 ?>
         <br>
         </td>
-        <td style="width: 79px;"><input size="15"
- name="Harga"></td>
+        <td style="width: 79px;"><input size="15" 
+ name="Harga" value="<?php echo $row['Harga_Jual']; ?>">
+
+       
+       </td>
+       
         <td style="width: 63px;"><input size="5"
  name="qty"></td>
         <td style="width: 103px;"><input size="15"
