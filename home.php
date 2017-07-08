@@ -42,7 +42,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  style="width: 119px; background-color: rgb(153, 0, 0);"><span
  style="color: white;">ENTRI PENJUALAN</span></td>
       </tr>
-      <tr>
+   <tr>
         <td style="width: 119px;">No Faktur</td>
         <td style="width: 297px;"><input size="30"
  name="NoFaktur"></td>
@@ -80,7 +80,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
         <td style="width: 170px;">
         <select id="TblBarang" name="TblBarang">
                 <option value="">Please Select</option>
-                <?php              $perintah="SELECT KODE_BARANG, Nama_Barang FROM blBarangn ORDER BY KODE_BARANG";
+                <?php              $perintah="SELECT KODE_BARANG, Nama_Barang FROM TblBarang ORDER BY KODE_BARANG";
                 $query = sqlsrv_query($conn,$perintah);
                 while ($row = sqlsrv_fetch_array($query)) {
                 ?>
