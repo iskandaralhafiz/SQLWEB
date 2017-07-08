@@ -36,69 +36,104 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
  
 <form method="post" action="home.php"> <pre>
-  <!--KECAMATAN-->
-Kecamatan : <select id="tbl_kecamatan" name="tbl_kecamatan">
-                <option value="">Please Select</option>
-                <?php              $perintah="SELECT KODE_KEC, KECAMATAN FROM tbl_kecamatan ORDER BY KODE_KEC";
-                $query = sqlsrv_query($conn,$perintah);
-                while ($row = sqlsrv_fetch_array($query)) {
-                ?>
-                    <option value="<?php echo $row['KODE_KEC']; ?>">
-                        <?php echo $row['KECAMATAN']; ?>
-                    </option>                <?php
-                }
-                ?>
-            </select>
- <!--DESA-->
-Desa      : <select id="tbl_desa" name="tbl_desa">
-                <option value="">Please Select</option>
-                <?php 
-             $perintah1="SELECT * FROM tbl_desa INNER JOIN tbl_kecamatan ON tbl_desa.KECAMATAN = tbl_kecamatan.KODE_KEC ORDER BY KODE_DESA";
-                $query1 = sqlsrv_query($conn,$perintah1);
-                while ($row1 = sqlsrv_fetch_array($query1)) {                ?>
-                    <option id="tbl_desa" class="<?php echo $row1['KODE_KEC']; ?>" value="<?php echo $row1['KODE_DESA']; ?>">
-                        <?php echo $row1['DESA']; ?>
-
-                    </option>
-
-<?php
-      }
-                ?>
-            </select>
-
-<!--TPS-->TPS       : <select id="tbl_tps1" name="tbl_tps1">
-                <option value="">Please Select</option>
-                <?php 
-             $perintah2="SELECT * FROM tbl_tps1 INNER JOIN tbl_desa ON tbl_tps1.DESA = tbl_desa.KODE_DESA ORDER BY KODE_TPS";
-                $query2 = sqlsrv_query($conn,$perintah2);
-                while ($row2 = sqlsrv_fetch_array($query2)) {
-                ?>
-                    <option id="tbl_tps1" class="<?php echo $row2['KODE_DESA']; ?>" value="<?php echo $row2['KODE_TPS']; ?>">
-                       <?php echo $row2['KODE_TPS']; ?>
-
-                    </option>
-                <?php
-                }
-                ?>
-            </select>
-_____________________________________________
-            CALON 1
-            <input name="C1" type="text" size="10" maxlength="10">
-            CALON 2
-            <input name="C2" type="text" size="10" maxlength="10">
-            CALON 3
-            <input name="C3" type="text" size="10" maxlength="10">
-_____________________________________________
-
-            <input type="submit" name="submit" value="KIRIM">
+  <table style="text-align: left; width: 401px; height: 194px;"
+ border="0" cellpadding="2" cellspacing="2">
+    <tbody>
+      <tr>
+        <td colspan="2" rowspan="1"
+ style="width: 119px; background-color: rgb(153, 0, 0);"><span
+ style="color: white;">ENTRI PENJUALAN</span></td>
+      </tr>
+      <tr>
+        <td style="width: 119px;">No Faktur</td>
+        <td style="width: 297px;"><input size="30"
+ name="NoFaktur"></td>
+      </tr>
+      <tr>
+        <td style="width: 119px;">Tanggal</td>
+        <td style="width: 297px;"><input size="30"
+ name="Tanggal"></td>
+      </tr>
+      <tr>
+        <td style="width: 119px;">Pelanggan</td>
+        <td style="width: 297px;">
+        <select name="Pelanggan">
+        </select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" rowspan="1"
+ style="width: 119px;"><input name="submit"
+ value="Reset Form Penjualan" type="reset"></td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <hr style="width: 100%; height: 2px;">
+  <table style="text-align: left; width: 620px; height: 60px;"
+ border="0" cellpadding="2" cellspacing="2">
+    <tbody>
+      <tr>
+        <td style="width: 170px;">Nama Barang</td>
+        <td style="width: 79px;">Harga @</td>
+        <td style="width: 63px;">Qty</td>
+        <td style="width: 103px;">Jumlah</td>
+        <td style="width: 149px;"></td>
+      </tr>
+      <tr>
+        <td style="width: 170px;">
+        <select name="Pelanggan">
+        </select>
+        <br>
+        </td>
+        <td style="width: 79px;"><input size="15"
+ name="Harga"></td>
+        <td style="width: 63px;"><input size="5"
+ name="qty"></td>
+        <td style="width: 103px;"><input size="15"
+ name="total"></td>
+        <td style="width: 149px;"><input name="submit"
+ value="Tambah" type="submit"></td>
+      </tr>
+    </tbody>
+  </table>
+  <hr style="width: 100%; height: 2px;"></form>
+<table
+ style="text-align: left; background-color: white; width: 715px;"
+ border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <th style="background-color: rgb(153, 0, 0);"><span
+ style="color: white;">No.</span></th>
+      <th style="width: 171px; background-color: rgb(153, 0, 0);"><span
+ style="color: white;">Nama Barang</span></th>
+      <th style="width: 125px; background-color: rgb(153, 0, 0);"><span
+ style="color: white;">Harga @</span></th>
+      <th style="width: 139px; background-color: rgb(153, 0, 0);"><span
+ style="color: white;">Qty</span></th>
+      <th style="width: 206px; background-color: rgb(153, 0, 0);"><span
+ style="color: white;">Jumlah</span></th>
+    </tr>
+    <tr>
+      <td></td>
+      <td style="width: 171px; background-color: white;"></td>
+      <td style="width: 125px; background-color: white;"></td>
+      <td style="width: 139px; background-color: white;"></td>
+      <td style="width: 206px; background-color: white;"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<br>
 
  </form>
- <script src="jquery-1.10.2.min.js"></script>
-        <script src="jquery.chained.min.js"></script>
-        <script>
-            $("#tbl_desa").chained("#tbl_kecamatan");
-            $("#tbl_tps1").chained("#tbl_desa");
-        </script>
+
 
 
 <?php
