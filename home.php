@@ -26,8 +26,26 @@ th { font-size: 1.2em; text-align: left; border: none; padding-left: 0; }
 td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 </style>
  </head><body>
-<h3>SIMTIF PILGUB | ENTRI PEROLEHAN SUARA TPS</h3>
-<p>Isi data di sini, kemudian click <strong>Submit</strong> untuk Mengirim SUARA TPS.</p>
+ 
+<img style="width: 300px; height: 80px;" alt="" src="dapur2.PNG"
+
+font-size:="" font-family:="" color:=""><span
+
+style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(0, 176, 80);"></span><span
+
+style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(89, 89, 89);"></span><span
+
+style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(89, 89, 89);"></span><br>
+
+<span
+
+style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(0, 176, 80);"></span><span
+
+style="font-size: 28pt; font-family: &quot;Arial Black&quot;; color: rgb(89, 89, 89);"></span>
+
+	<!-- Skrip CSS -->
+
+   <link rel="stylesheet" href="style.css"/>
  
  <?php
  include "koneksi.php";
