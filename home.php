@@ -35,7 +35,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  
 <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
  
-<form method="post" action="home.php"> <pre>
+<form method="post" action="home.php"> 
   <table style="text-align: left; width: 401px; height: 194px;"
  border="0" cellpadding="2" cellspacing="2">
     <tbody>
