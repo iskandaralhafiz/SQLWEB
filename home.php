@@ -36,7 +36,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
  
 <form method="post" action="home.php"> 
-  <table style="text-align: left; width: 401px; height: 194px;"
+   <table style="text-align: left; width: 401px; height: 194px;"
  border="0" cellpadding="2" cellspacing="2">
     <tbody>
       <tr>
@@ -68,8 +68,6 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
       </tr>
     </tbody>
   </table>
-  <br>
-  <hr style="width: 100%; height: 2px;">
   <table style="text-align: left; width: 620px; height: 60px;"
  border="0" cellpadding="2" cellspacing="2">
     <tbody>
@@ -130,6 +128,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
     </tr>
   </tbody>
 </table>
+
 <br>
 
  </form>
