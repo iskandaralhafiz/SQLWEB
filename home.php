@@ -60,7 +60,8 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
       <tr>
         <td colspan="2" rowspan="1"
  style="width: 119px;"></td>
-      </tr>
+     </tr><input name="submit"
+ value="Tambah" type="submit">
     </tbody>
  </table>
   <table style="text-align: left; width: 620px; height: 60px;" border="0" cellpadding="2" cellspacing="2">
@@ -97,12 +98,11 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  name="qty"></td>
         <td style="width: 103px;"><input size="15"
  name="total"></td>
-        <td style="width: 149px;"><input name="submit"
- value="Tambah" type="submit"></td>
+        <td style="width: 149px;"></td>
       </tr>
     </tbody>
   </table>
-  <hr style="width: 100%; height: 2px;"></form>
+  <hr style="width: 100%; height: 2px;">
 <table
  style="text-align: left; background-color: white; width: 715px;"
  border="1" cellpadding="2" cellspacing="2">
