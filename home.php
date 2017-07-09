@@ -93,10 +93,10 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
         <td style="width: 79px;"><input size="15" 
  name="Harga" 
             <?php
-                if (isset($_GET['KODE_BARANG']))
+                if (isset($_GET['TblBarang']))
                 {
                      ?> 
-                 VALUE =$_GET['KODE_BARANG']>
+                 VALUE =$_GET['TblBarang']>
                                        
                  <?php
                 }
