@@ -164,7 +164,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 //catch(PDOException $e) {
   // print( "Error connecting to SQL Server" );
 //die(print_r($e));
- echo "<h3>Data berhasil dirkirim!</h3>";
+ echo "$_POST['TblBarang']";
 
  
 
