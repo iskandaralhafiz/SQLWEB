@@ -59,8 +59,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
      </tr>
       <tr>
         <td colspan="2" rowspan="1"
- style="width: 119px;"><input name="submit"
- value="Reset Form Penjualan" type="Submit"></td>
+ style="width: 119px;"></td>
       </tr>
     </tbody>
  </table>
