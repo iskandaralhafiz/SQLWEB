@@ -171,7 +171,7 @@ if(isset($_POST['NoFaktur']))
 
 }
 
-
+ echo $_POST['NoFaktur'];
 
 ?>
 </body>
