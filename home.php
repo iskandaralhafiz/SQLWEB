@@ -45,7 +45,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
       </tr>
    <tr>
         <td style="width: 119px;">No Faktur</td>
-        <td style="width: 297px;"><input size="30"name="NoFaktur"></td>
+        <td style="width: 297px;"><input size="30"name="NoFaktur" id ="NoFaktur"></td>
       </tr>
       <tr>
        <td style="width: 119px;">Tanggal</td>
@@ -168,7 +168,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 if(isset($_POST['NoFaktur']))
 {
  echo $_POST['NoFaktur'];
-ape dah
+
 }
 
 
