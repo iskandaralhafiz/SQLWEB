@@ -64,8 +64,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
       </tr>
     </tbody>
  </table>
-  <table style="text-align: left; width: 620px; height: 60px;"
- border="0" cellpadding="2" cellspacing="2">
+  <table style="text-align: left; width: 620px; height: 60px;" border="0" cellpadding="2" cellspacing="2">
     <tbody>
       <tr>
         <td style="width: 170px;">Nama Barang</td>
@@ -97,7 +96,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
                 if (isset($_GET['KODE_BARANG']))
                 {
                      ?> 
-                 VALUE =.$_GET['KODE_BARANG']>
+                 VALUE =$_GET['KODE_BARANG']>
                                        
                  <?php
                 }
