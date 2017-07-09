@@ -155,32 +155,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 //}
 
 // Insert registration info
-if(!empty($_POST)) {
-//try {
-$C1 = $_POST['C1'];
-$C2 = $_POST['C2'];
-$C3 = $_POST['C3'];
-$TPS = $_POST['tbl_tps1']; 
- 
- // Insert data
-$sql_insert = "INSERT INTO dbo.tbl_pemilu (KODE_TPS,C1,C2,C3) VALUES ('$TPS',$C1, $C2,$C3)";
- 
-$query3 = sqlsrv_query($conn,$sql_insert);
-sqlsrv_execute($query3);
- 
- $sql_insert1 = "INSERT INTO dbo.tbl_rc (KODE_TPS,ID_KAN,SUARA) VALUES ('$TPS',1, $C1)";
- $sql_insert2 = "INSERT INTO dbo.tbl_rc (KODE_TPS,ID_KAN,SUARA) VALUES ('$TPS',2, $C2)";
- $sql_insert3 = "INSERT INTO dbo.tbl_rc (KODE_TPS,ID_KAN,SUARA) VALUES ('$TPS',3, $C3)";
- 
- $query31 = sqlsrv_query($conn,$sql_insert1);
-sqlsrv_execute($query31);
- 
- $query32 = sqlsrv_query($conn,$sql_insert2);
-sqlsrv_execute($query32);
- 
- $query33 = sqlsrv_query($conn,$sql_insert3);
-sqlsrv_execute($query33);
- 
+
 //$stmt = $conn->prepare($sql_insert);
 //$stmt->bindValue(1, $Kode_Penguna);
 //$stmt->bindValue(2, $Nama_Pengguna);
@@ -190,11 +165,11 @@ sqlsrv_execute($query33);
   // print( "Error connecting to SQL Server" );
 //die(print_r($e));
  echo "<h3>Data berhasil dirkirim!</h3>";
-}
+
  
 
 
-sqlsrv_close($conn);
+
 
 ?>
 </body>
