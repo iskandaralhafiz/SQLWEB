@@ -34,6 +34,10 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  
 <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
  
+ function tampilkanpesan(nilai){
+ alert("mantap"+nilai)
+ }
+ 
 <form method="POST" action="home.php"> 
   <table style="text-align: left; width: 401px; height: 194px;"
  border="0" cellpadding="2" cellspacing="2">
@@ -75,7 +79,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
       </tr>
       <tr>
         <td style="width: 170px;">
-        <select id="TblBarang" name="TblBarang" onChange="this.form.submit();">
+        <select id="TblBarang" name="TblBarang" onChange="tampilkanpesan(this.value)">
                 <option value="">Please Select</option> 
                 <?php              $perintah="SELECT KODE_BARANG, Nama_Barang,Harga_Jual FROM TblBarang ORDER BY KODE_BARANG";
                 $query = sqlsrv_query($conn,$perintah);
