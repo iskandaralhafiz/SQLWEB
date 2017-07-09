@@ -22,7 +22,7 @@ h3 { font-size: 1.2em; }
 table { margin-top: 0.75em; }
 th { font-size: 1.2em; text-align: left; border: none; padding-left: 0; }
 td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
-</style>
+<</style>
  </head><body>
  
 <img style="width: 300px; height: 80px;" alt="" src="dapur2.PNG"
@@ -37,7 +37,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  function tampilkanpesan(nilai){
  alert("mantap"+nilai)
  }
- 
+ </script>
 <form method="POST" action="home.php"> 
   <table style="text-align: left; width: 401px; height: 194px;"
  border="0" cellpadding="2" cellspacing="2">
