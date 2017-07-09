@@ -56,7 +56,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
         <td style="width: 297px;">
         <select name="Pelanggan">        </select>
         </td>
-      </tr>
+     </tr>
       <tr>
         <td colspan="2" rowspan="1"
  style="width: 119px;"><input name="submit"
@@ -92,8 +92,16 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
         </Select>
    </form>
         <td style="width: 79px;"><input size="15" 
- name="Harga" value="mantap">
-
+ name="Harga" 
+            <?php
+                if (isset($_GET['KODE_BARANG']))
+                {
+                     ?> 
+                 VALUE =.$_GET['KODE_BARANG']>
+                                       
+                 <?php
+                }
+                ?>
        
        </td>
        
