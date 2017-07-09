@@ -32,7 +32,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  include "koneksi.php";
 ?>
  
-<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+
  
  
 <form method="POST" action="home.php"> 
