@@ -169,7 +169,7 @@ if(isset($_POST['NoFaktur']))
 {
  $faktur = $_POST['NoFaktur'];
 
- echo $faktur;
+ echo "$faktur";
 }
 
 
