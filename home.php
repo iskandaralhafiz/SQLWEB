@@ -34,7 +34,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  
 <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
  
-<form method="GET" action="home.php"> 
+<form method="POST" action="home.php"> 
   <table style="text-align: left; width: 401px; height: 194px;"
  border="0" cellpadding="2" cellspacing="2">
     <tbody>      <tr>
@@ -91,17 +91,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
         </Select>
    </form>
         <td style="width: 79px;"><input size="15" 
- name="Harga" 
-            <?php
-                if (isset($_GET['TblBarang']))
-                {
-                     ?> 
-                 VALUE =$_GET['TblBarang']>
-                                       
-                 <?php
-                }
-                ?>
-       
+ name="Harga" VALUE ="<?PHP echo $KODE_BARANG; ?>"  
        </td>
        
         <td style="width: 63px;"><input size="5"
