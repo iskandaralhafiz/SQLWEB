@@ -76,7 +76,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
       </tr>
       <tr>
         <td style="width: 170px;">
-        <select id="TblBarang" name="TblBarang" onChange="this.form.submit()">
+        <select id="TblBarang" name="TblBarang" onChange="this.form.submit();">
                 <option value="">Please Select</option> 
                 <?php              $perintah="SELECT KODE_BARANG, Nama_Barang,Harga_Jual FROM TblBarang ORDER BY KODE_BARANG";
                 $query = sqlsrv_query($conn,$perintah);
