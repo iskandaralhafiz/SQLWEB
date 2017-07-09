@@ -92,7 +92,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
         </Select>
    </form>
         <td style="width: 79px;"><input size="15" 
- name="Harga" value ="<?PHP echo "mantab" ?>">  
+ name="Harga" value ="<?PHP echo "y" ?>">  
        </td>
        
         <td style="width: 63px;"><input size="5"
