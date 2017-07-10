@@ -31,10 +31,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  <?php
  include "koneksi.php";
 ?>
- 
-
- 
- 
+  
 <form method="POST" action="home.php"> 
   <table style="text-align: left; width: 401px; height: 194px;"
  border="0" cellpadding="2" cellspacing="2">
@@ -76,25 +73,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
       </tr>
       <tr>
         <td style="width: 170px;">
-        <select id="TblBarang" name="TblBarang">
-
-                <option value="">Please Select</option> 
-                <?php              
-         $perintah="SELECT KODE_BARANG, Nama_Barang,Harga_Jual FROM TblBarang ORDER BY KODE_BARANG";
-                $query = sqlsrv_query($conn,$perintah);
-         
-                while ($row = sqlsrv_fetch_array($query)) {
-                ?>
-                    <option value="<?php echo $row['KODE_BARANG']; ?>">
-                        <?php echo $row['Nama_Barang']; ?>
-                    </option>            
-        <?php
-              
-                }
-                ?>
-        <br>
-        </td>
-        </Select>
+        
    </form>
         <td style="width: 79px;"><input size="15" 
  name="Harga">  
