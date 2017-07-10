@@ -76,13 +76,13 @@ $perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGOR
 
  <tr>
 
- <td style="border: none;padding: 4px;"><b>Hari</b></td>
+ <td style="border: none;padding: 4px;"><b>KODE BARANG</b></td>
 
- <td style="border: none;padding: 4px;"><b>Jam</b></td>
+ <td style="border: none;padding: 4px;"><b>Nama Barang</b></td>
 
- <td style="border: none;padding: 4px;"><b>Dokter</b></td>
+ <td style="border: none;padding: 4px;"><b>Harga </b></td>
 
- <td style="border: none;padding: 4px;"><b>Keterangan</b></td>
+ <td style="border: none;padding: 4px;"><b>Stock</b></td>
 
  </tr>
 
