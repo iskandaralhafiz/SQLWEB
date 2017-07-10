@@ -105,11 +105,7 @@ $perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGOR
 
 
 <?php
-	if(isset($_POST['cari'])){
- 
-
-
-	}
+	
 	?>
 
 </body>
