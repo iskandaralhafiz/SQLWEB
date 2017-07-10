@@ -7,7 +7,6 @@ session_start();
  ?>
  Selamat <b><?php echo $_SESSION['username'] ?></b> Berhasil Masuk <br />
  <a href="logout.php">Klik di sini</a> untuk Keluar
-<a href="barang.php">Klik di sini</a> nampilkan barang
 <?php } ?>//----------------------
 
 <html>
@@ -56,7 +55,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
       <tr>
         <td style="width: 119px;">Pelanggan</td>
         <td style="width: 297px;">
-        <select name="Pelanggan">        </select>
+       <select name="Pelanggan">        </select>
         </td>
      </tr>
       <tr>
@@ -79,7 +78,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
         <td style="width: 170px;">
         <select id="KODE_BARANG" name="KODE_BARANG">
 
-                <option value=0>Please Select</option> 
+                <option value="">Please Select</option> 
                 <?php              $perintah="SELECT KODE_BARANG, Nama_Barang,Harga_Jual FROM TblBarang ORDER BY KODE_BARANG";
                 $query = sqlsrv_query($conn,$perintah);
          
