@@ -95,13 +95,13 @@ $perintah1="SELECT KODE_BARANG, Nama_Barang,Harga_Jual,Stock FROM TblBarang ORDE
              
 <tr>
 
- <td style="border: none;padding: 4px;"><?php echo $row1['KODE_KATEGORI'];?></td>
+ <td style="border: none;padding: 4px;"><?php echo $row1['KODE_BARANG'];?></td>
 
- <td style="border: none;padding: 4px;"><?php echo $row1['KODE_KATEGORI'];?></td>
+ <td style="border: none;padding: 4px;"><?php echo $row1['Nama_Barang'];?></td>
 
- <td style="border: none;padding: 4px;"><?php echo $row1['KODE_KATEGORI'];?></td>
+ <td style="border: none;padding: 4px;"><?php echo $row1['Harga_Jual'];?></td>
 
- <td style="border: none;padding: 4px;"><?php echo $row1['KODE_KATEGORI'];?></td>
+ <td style="border: none;padding: 4px;"><?php echo $row1['Stock'];?></td>
 
  </tr>
 <?php 
