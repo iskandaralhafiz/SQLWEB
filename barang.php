@@ -62,13 +62,13 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  if(isset($_POST['KODE_KATEGORI'])){
  $sql1 = "select * from TblBarang WHERE Kategori = ".$_POST['KODE_KATEGORI'];
  $q = sqlsrv_query($conn,$sql1);
- while($data = sqlsrv_fetch_array($q)){
+ while($data1 = sqlsrv_fetch_array($q)){
  ?>
  <tr>
- <td style="border: none;padding: 4px;"><?php echo $data['hari'];?></td>
- <td style="border: none;padding: 4px;"><?php echo $data['jam'];?></td>
- <td style="border: none;padding: 4px;"><?php echo $data['dokter'];?></td>
- <td style="border: none;padding: 4px;"><?php echo $data['keterangan'];?></td>
+ <td style="border: none;padding: 4px;"><?php echo $data1['KODE_BARANG'];?></td>
+ <td style="border: none;padding: 4px;"><?php echo $data1['Nama_Barang'];?></td>
+ <td style="border: none;padding: 4px;"><?php echo $data1['Harga_Jual'];?></td>
+ <td style="border: none;padding: 4px;"><?php echo $data1['Stock'];?></td>
  </tr>
  <?php
  }
