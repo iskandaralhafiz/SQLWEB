@@ -47,7 +47,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 
  <option value="">--Kategori--</option>
 <?php              
- $perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGORI";
+$perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGORI";
                 $query = sqlsrv_query($conn,$perintah);
                 while ($row = sqlsrv_fetch_array($query)) {
                 ?>
@@ -61,7 +61,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 
  </select>
 
- <input type="submit" value="cari">
+ <input type="submit" value="cari" name="cari">
 
  </form>
 
@@ -85,10 +85,10 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 
  </tr>
 <?php
-	 $KODE    = $_POST['KODE_KATEGORI'];             
-if (empty($KODE)){
-    echo "Name belum diisi";
-    echo "<br/>";
+	if(isset($_POST['cari']){
+ 
+$KODE = $_POST[KODE_KATEGORI];
+ echo $KODE;
 }
 	?>
 
