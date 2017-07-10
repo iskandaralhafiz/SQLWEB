@@ -44,7 +44,23 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 <select name="KODE_KATEGORI" id ="KODE_KATEGORI">
 
 <option value="">--Kategori--</option>
+<?php
 
+ $a="SELECT * FROM TblKategori";
+
+ $sql=sqlsrv_query($conn,$a);
+
+ while($data=sqlsrv_fetch_array($sql)){
+
+ ?>
+
+ <option value="<?php echo $data['KODE_KATEGORI']?>"><?php echo $data['Kategori']?></option>
+
+ <?php
+
+ }
+
+ ?>
  
 
  </select>
