@@ -91,7 +91,7 @@ $perintah1="SELECT KODE_BARANG, Nama_Barang,Harga_Jual,Stock FROM TblBarang ORDE
 
                 $query1 = sqlsrv_query($conn,$perintah1);
                 while ($row1 = sqlsrv_fetch_array($query1)) {
-                
+    ?>            
              
 <tr>
 
@@ -104,7 +104,7 @@ $perintah1="SELECT KODE_BARANG, Nama_Barang,Harga_Jual,Stock FROM TblBarang ORDE
  <td style="border: none;padding: 4px;"><?php echo $row1['KODE_KATEGORI'];?></td>
 
  </tr>
-
+<?php 
 }
                 ?> 
  
