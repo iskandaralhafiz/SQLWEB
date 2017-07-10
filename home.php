@@ -77,15 +77,20 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
       </tr>
       <tr>
         <td style="width: 170px;">
-        <select id="TblBarang" name="TblBarang" onChange="this.form.submit();">
-                <option value="">Please Select</option> 
+        <select id="KODE_BARANG" name="KODE_BARANG" onChange="changeValue(this.value)">
+
+                <option value=0>Please Select</option> 
                 <?php              $perintah="SELECT KODE_BARANG, Nama_Barang,Harga_Jual FROM TblBarang ORDER BY KODE_BARANG";
                 $query = sqlsrv_query($conn,$perintah);
+          $jsArray = "var dtMhs = new Array();\n";  
                 while ($row = sqlsrv_fetch_array($query)) {
                 ?>
                     <option value="<?php echo $row['KODE_BARANG']; ?>">
                         <?php echo $row['Nama_Barang']; ?>
-                    </option>                <?php
+                    </option>                <
+         ?php
+              $jsArray .= "dtMhs['" . $row['KODE_BARANG'] . "'] = {Nama_Barang:'" . addslashes($row['Nama_Barang']) . "',Harga_Jual:'".addslashes($row['Harga_Jual'])."'};\n";    
+                                                   
                 }
                 ?>
         <br>
@@ -138,8 +143,24 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
       <td></td>
       <td></td>
     </tr>
+   <tr>
+        <td>Nama Mahasiswa</td>
+        <td><input type="text" name="Nama_Barang" id="Nama_Barang"/></td>
+      </tr>
+      <tr>
+        <td>Jurusan</td>
+        <td><input type="text" name="Harga_Jual" id="Harga_Jual"/></td>
+      </tr>
+
   </tbody>
 </table>
+<script type="text/javascript">    
+    <?php echo $jsArray; ?>  
+    function changeValue(KODE_BARANG){  
+    document.getElementById('Nama_Barang').value = dtMhs[KODE_BARANG].Nama_Barang;  
+    document.getElementById('Harga_Jual').value = dtMhs[KODE_BARANG].Harga_Jual;  
+    };  
+    </script> 
 
 <br>
 
