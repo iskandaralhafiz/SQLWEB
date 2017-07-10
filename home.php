@@ -55,7 +55,7 @@ $perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGOR
                         <?php echo $row['KATEGORI']; ?>
                     </option>                
 					<?php
-                }
+             }
                 ?>
  
 
@@ -86,18 +86,18 @@ $perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGOR
 
  </tr>
 
+<tr>
 
- <tr>
+ <td style="border: none;padding: 4px;"><?php echo "mantap" ;?></td>
 
- <td style="border: none;padding: 4px;"><?php echo $row1['KODE_BARANG'];?></td>
+ <td style="border: none;padding: 4px;"><?php echo "mantap";?></td>
 
- <td style="border: none;padding: 4px;"><?php echo $row1['Nama_Barang'];?></td>
+ <td style="border: none;padding: 4px;"><?php echo "mantap";?></td>
 
- <td style="border: none;padding: 4px;"><?php echo $row1['Harga_Jual'];?></td>
-
- <td style="border: none;padding: 4px;"><?php echo $row1['Stock'];?></td>
+ <td style="border: none;padding: 4px;"><?php echo "mantap";?></td>
 
  </tr>
+ 
 
 
 
