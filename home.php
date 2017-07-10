@@ -10,7 +10,8 @@ session_start();
 <?php } ?>//----------------------
 
 <html>
-<head>
+
+ <head>
  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
 <Title>ENTRI PEROLEHAN SUARA TPS</Title>
 <style type="text/css">
@@ -54,8 +55,10 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 
  ?>
 
- <option value="<?php echo $data['KODE_KATEGORI']?>"><?php echo $data['KATEGORI']?></option>
+ <option value="<?php echo $data['KODE_KATEGORI'];?>">
+  <?php echo $data['KATEGORI'];?></option>
 
+ 
  <?php
 
  }
