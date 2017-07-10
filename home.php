@@ -64,11 +64,11 @@ $perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGOR
 
 	<input type="submit" value="cari" name="cari">
 
- 
+ </form>
  </td>
 
  </tr>
-</form>
+
  </table>
 
  <table style="border: none;font-size: 12px;color: #5b5b5b;width: 100%;margin: 10px 0 10px 0;">
