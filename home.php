@@ -110,6 +110,7 @@ $perintah1="SELECT KODE_BARANG, Nama_Barang,Harga_Jual,Stock FROM TblBarang WHER
  </tr>
 <?php 
 }
+		}
                 ?> 
  
 
