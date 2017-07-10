@@ -158,7 +158,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
     <?php
  echo $jsArray; 
  ?>  
-    function changeValue(KODE_BARANG){  
+    function changeValue('KODE_BARANG'){  
     document.getElementById('Nama_Barang').value = dtMhs[KODE_BARANG].Nama_Barang;  
     document.getElementById('Harga_Jual').value = dtMhs[KODE_BARANG].Harga_Jual;
     } 
