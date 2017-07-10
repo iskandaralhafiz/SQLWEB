@@ -36,6 +36,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 
   <table style="border: none;font-size: 12px;color: #5b5b5b;width: 100%;margin: 10px 0 10px 0;">
 
+	
 <tr>
 
 <td colspan="5">
@@ -84,11 +85,10 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 
  </tr>
 <?php
-if(isset($_POST['KODE_KATEGORI'])){
-	 echo $_POST['KODE_KATEGORI'];
-	else {
-		echo "gagal";
-	}
+	 $KODE    = $_POST['KODE_KATEGORI'];             
+if (empty($KODE)){
+    echo "Name belum diisi";
+    echo "<br/>";
 }
 	?>
 
