@@ -84,17 +84,6 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 
  </tr>
 
-<?php
-
-//if(isset($_POST['KODE_KATEGORI'])){
-
-$KODE_KATEGORI = $_POST['KODE_KATEGORI'];
- $sql1 = "SELECT KODE_BARANG,Nama_Barang,Harga_Jual,Stock FROM TblBarang WHERE Kategori= $KODE_KATEGORI";
- $q = sqlsrv_query($conn,$sql1);
-
- while($row1 = sqlsrv_fetch_array($q)){
-
- ?>
 
 
  <tr>
@@ -109,13 +98,7 @@ $KODE_KATEGORI = $_POST['KODE_KATEGORI'];
 
  </tr>
 
-<?php
 
- }
-
-//}
-
- ?>
 
   </table>     
 
