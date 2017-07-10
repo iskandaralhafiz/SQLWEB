@@ -41,13 +41,11 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 
 <form method="post" action="home.php">
 
-<select name="KODE_KATEGORI">
+<select name="KODE_KATEGORI" id ="KODE_KATEGORI">
 
-<option value="" disabled="disabled">--Kategori--</option>
+<option value="">--Kategori--</option>
 
  <?php
-
-
 
  $a="SELECT * FROM TblKategori";
 
