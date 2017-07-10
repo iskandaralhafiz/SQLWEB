@@ -1,3 +1,4 @@
+
 <html>
 <head>
  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
@@ -22,7 +23,8 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 
 </style>
 
- </head><body>
+ </head>
+ <body>
 
 
 <div id="smallRight"><h3 style="background-color:#A6D44D">DATA BARANG</h3>
@@ -44,7 +46,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  }
  ?>
  </select>
- <input type="submit" value="cari"/>
+ <input type="submit" value="cari">
  </form>
  </td>
  </tr>
@@ -58,7 +60,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  </tr>
  <?php
  if(isset($_POST['KODE_KATEGORI'])){
- $sql1 = "select * from TblBarang WHERE KODE_KATEGORI = ".$_POST['KODE_KATEGORI'];
+ $sql1 = "select * from TblBarang WHERE Kategori = ".$_POST['KODE_KATEGORI'];
  $q = sqlsrv_query($conn,$sql1);
  while($data = sqlsrv_fetch_array($q)){
  ?>
