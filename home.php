@@ -87,27 +87,26 @@ $perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGOR
  </tr>
 
 <?php              
-$perintah1="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGORI";
+$perintah1="SELECT KODE_BARANG, Nama_Barang,Harga_Jual,Stock FROM TblBarang ORDER BY KODE_BARANG";
+
                 $query1 = sqlsrv_query($conn,$perintah1);
                 while ($row1 = sqlsrv_fetch_array($query1)) {
-                ?>
-                    <option value="<?php echo $row1['KODE_KATEGORI']; ?>">
-                        <?php echo $row1['KATEGORI']; ?>
-                    </option>                
-					<?php
-             }
-                ?> 
+                
+             
 <tr>
 
- <td style="border: none;padding: 4px;"><?php echo "mantap" ;?></td>
+ <td style="border: none;padding: 4px;"><?php echo $row1['KODE_KATEGORI'];?></td>
 
- <td style="border: none;padding: 4px;"><?php echo "mantap";?></td>
+ <td style="border: none;padding: 4px;"><?php echo $row1['KODE_KATEGORI'];?></td>
 
- <td style="border: none;padding: 4px;"><?php echo "mantap";?></td>
+ <td style="border: none;padding: 4px;"><?php echo $row1['KODE_KATEGORI'];?></td>
 
- <td style="border: none;padding: 4px;"><?php echo "mantap";?></td>
+ <td style="border: none;padding: 4px;"><?php echo $row1['KODE_KATEGORI'];?></td>
 
  </tr>
+
+}
+                ?> 
  
 
 
@@ -115,9 +114,7 @@ $perintah1="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGO
   </table>     
 
 
-<?php
-	
-	?>
+
 
 </body>
 </html>
