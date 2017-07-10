@@ -61,7 +61,8 @@ $perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGOR
 
  </select>
 
- <input type="submit" value="cari" name="cari">
+
+	<input type="submit" value="cari" name="cari">
 
  </form>
 
@@ -108,6 +109,7 @@ $perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGOR
  
 $KODE = $_POST['KODE_KATEGORI'];
  echo "konek";
+	}
 	?>
 
 </body>
