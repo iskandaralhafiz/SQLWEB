@@ -1,4 +1,4 @@
- <?php
+<?php
 session_start();
  if (empty($_SESSION['username'])) {
  header("location:index.php"); // jika belum login, maka dikembalikan ke file form_login.php
@@ -64,11 +64,11 @@ $perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGOR
 
 	<input type="submit" value="cari" name="cari">
 
- 
+ 
  </td>
 
  </tr>
-
+</form>
  </table>
 
  <table style="border: none;font-size: 12px;color: #5b5b5b;width: 100%;margin: 10px 0 10px 0;">
@@ -109,15 +109,7 @@ $perintah1="SELECT KODE_BARANG, Nama_Barang,Harga_Jual,Stock FROM TblBarang ORDE
 }
 		
 ?> 
- 
- </form>
-
-
   </table>     
-
-
-
-
 </body>
 </html>
 
