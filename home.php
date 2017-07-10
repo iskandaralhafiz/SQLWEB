@@ -87,13 +87,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 
  </tr>
 
- <?php
-
- }
-
- }
-
- ?>
+ 
 
   </table>     
 
