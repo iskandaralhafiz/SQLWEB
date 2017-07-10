@@ -177,7 +177,6 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
                                         
 ?>
 
-<div id="smallRight"><h3 style="background-color:#A6D44D">Jadwal Dokter</h3>
 
 <table style="border: none;font-size: 12px;color: #5b5b5b;width: 100%;margin: 10px 0 10px 0;">
 
@@ -273,8 +272,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 
   </table>
 
- </div>
-
+ 
 
 </body>
 </html>
