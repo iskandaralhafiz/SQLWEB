@@ -86,6 +86,10 @@ $perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGOR
  </tr>
 
 <?php    
+	 if(!empty($_POST)) {
+ 
+$KODE_KATEGORI = $_POST['KODE_KATEGORI'];
+ echo $KODE_KATEGORI;
 $perintah1="SELECT KODE_BARANG, Nama_Barang,Harga_Jual,Stock FROM TblBarang ORDER BY KODE_BARANG";
 
                 $query1 = sqlsrv_query($conn,$perintah1);
@@ -105,6 +109,7 @@ $perintah1="SELECT KODE_BARANG, Nama_Barang,Harga_Jual,Stock FROM TblBarang ORDE
  </tr>
 <?php 
 }
+	 }
 ?> 
   </table>     
 </body>
