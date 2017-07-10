@@ -25,9 +25,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 
  </head>
  <body>
-
-
-<div id="smallRight"><h3 style="background-color:#A6D44D">DATA BARANG</h3>
+ <div id="smallRight"><h3 style="background-color:#A6D44D">Jadwal Dokter</h3>
 <table style="border: none;font-size: 12px;color: #5b5b5b;width: 100%;margin: 10px 0 10px 0;">
 <tr>
 <td colspan="5">
@@ -61,7 +59,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  <?php
  if(isset($_POST['KODE_KATEGORI'])){
  $sql1 = "select * from TblBarang WHERE Kategori = ".$_POST['KODE_KATEGORI'];
- $q = sqlsrv_query($conn,$sql1);
+ $q = sq lsrv_query($conn,$sql1);
  while($data1 = sqlsrv_fetch_array($q)){
  ?>
  <tr>
