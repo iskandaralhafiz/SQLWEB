@@ -76,7 +76,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
       </tr>
       <tr>
         <td style="width: 170px;">
-        <select id="KODE_BARANG" name="KODE_BARANG">
+        <select id="TblBarang" name="TblBarang">
 
                 <option value="">Please Select</option> 
                 <?php              $perintah="SELECT KODE_BARANG, Nama_Barang,Harga_Jual FROM TblBarang ORDER BY KODE_BARANG";
@@ -145,13 +145,6 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 
   </tbody>
 </table>
-<script type="text/javascript">    
-   
-
-<br>
-
-
-
 
 
 <?php
