@@ -93,7 +93,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 
  if(isset($_POST['KODE_KATEGORI'])){
 
- $sql1 = "select * from TblBarang WHERE Kategori = ".$_POST['KODE_KATEGORI'];
+ $sql1 = "select * from TblBarang WHERE Kategori = ".$_POST['KODE_KATEGORI']"";
 
  $q = sq lsrv_query($conn,$sql1);
 
