@@ -79,7 +79,8 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
         <select id="TblBarang" name="TblBarang">
 
                 <option value="">Please Select</option> 
-                <?php              $perintah="SELECT KODE_BARANG, Nama_Barang,Harga_Jual FROM TblBarang ORDER BY KODE_BARANG";
+                <?php              
+         $perintah="SELECT KODE_BARANG, Nama_Barang,Harga_Jual FROM TblBarang ORDER BY KODE_BARANG";
                 $query = sqlsrv_query($conn,$perintah);
          
                 while ($row = sqlsrv_fetch_array($query)) {
@@ -96,7 +97,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
         </Select>
    </form>
         <td style="width: 79px;"><input size="15" 
- name="Harga" value ="<?PHP echo "mn" ?>">  
+ name="Harga">  
        </td>
        
         <td style="width: 63px;"><input size="5"
@@ -124,7 +125,6 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
       <th style="width: 139px; background-color: rgb(153, 0, 0);"><span
  style="color: white;">Qty</span></th>
       <th style="width: 206px; background-color: rgb(153, 0, 0);"><span
-
                                                                         style="color: white;">Jumlah</span></th>
     </tr>
     <tr>
@@ -168,18 +168,9 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 //catch(PDOException $e) {
   // print( "Error connecting to SQL Server" );
 //die(print_r($e));
-
-
-
  echo $_POST['NoFaktur'];
 
-                                        
-                                        
 ?>
-
-
-
-
 </body>
 </html>
 
