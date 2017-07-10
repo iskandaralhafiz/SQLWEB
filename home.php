@@ -77,7 +77,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
       </tr>
       <tr>
         <td style="width: 170px;">
-        <select id="KODE_BARANG" name="KODE_BARANG" onChange="this.form.submit">
+        <select id="KODE_BARANG" name="KODE_BARANG">
 
                 <option value=0>Please Select</option> 
                 <?php              $perintah="SELECT KODE_BARANG, Nama_Barang,Harga_Jual FROM TblBarang ORDER BY KODE_BARANG";
@@ -142,14 +142,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
       <td></td>
       <td></td>
     </tr>
-   <tr>
-        <td>Nama Mahasiswa</td>
-        <td><input type="text" name="Nama_Barang" id="Nama_Barang"/></td>
-      </tr>
-      <tr>
-        <td>Jurusan</td>
-        <td><input type="text" name="Harga_Jual" id="Harga_Jual"/></td>
-      </tr>
+  
 
   </tbody>
 </table>
