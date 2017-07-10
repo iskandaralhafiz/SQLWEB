@@ -89,23 +89,23 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  if(isset($_POST['KODE_KATEGORI'])){
 
 $KODE_KATEGORI = $_POST['KODE_KATEGORI'];
- $sql1 = "select KODE_BARANG,Nama_Barang,Harga_Jual,Stock from TblBarang WHERE Kategori= '$KODE_KATEGORI'";
+ $sql1 = "SELECT KODE_BARANG,Nama_Barang,Harga_Jual,Stock FROM TblBarang WHERE Kategori= $KODE_KATEGORI";
  $q = sqlsrv_query($conn,$sql1);
 
- while($data1 = sqlsrv_fetch_array($q)){
+ while($row1 = sqlsrv_fetch_array($q)){
 
  ?>
 
 
  <tr>
 
- <td style="border: none;padding: 4px;"><?php echo $data1['KODE_BARANG'];?></td>
+ <td style="border: none;padding: 4px;"><?php echo $row1['KODE_BARANG'];?></td>
 
- <td style="border: none;padding: 4px;"><?php echo $data1['Nama_Barang'];?></td>
+ <td style="border: none;padding: 4px;"><?php echo $row1['Nama_Barang'];?></td>
 
- <td style="border: none;padding: 4px;"><?php echo $data1['Harga_Jual'];?></td>
+ <td style="border: none;padding: 4px;"><?php echo $row1['Harga_Jual'];?></td>
 
- <td style="border: none;padding: 4px;"><?php echo $data1['Stock'];?></td>
+ <td style="border: none;padding: 4px;"><?php echo $row1['Stock'];?></td>
 
  </tr>
 
