@@ -1,3 +1,6 @@
+
+
+
 <div id="smallRight"><h3 style="background-color:#A6D44D">Jadwal Dokter</h3>
 <table style="border: none;font-size: 12px;color: #5b5b5b;width: 100%;margin: 10px 0 10px 0;">
 <tr>
@@ -47,3 +50,5 @@
  ?>
   </table>
  </div>
+</body>
+</html>
