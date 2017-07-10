@@ -87,11 +87,11 @@ $perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGOR
  </tr>
 
 <?php    
-	if(isset($_POST['cari'])){
+	//if(isset($_POST['cari'])){
  
-$KODE = $_POST['KODE_KATEGORI'];
+//$KODE = $_POST['KODE_KATEGORI'];
 		
-$perintah1="SELECT KODE_BARANG, Nama_Barang,Harga_Jual,Stock FROM TblBarang WHERE Kategori= '$KODE'";
+$perintah1="SELECT KODE_BARANG, Nama_Barang,Harga_Jual,Stock FROM TblBarang";
 
                 $query1 = sqlsrv_query($conn,$perintah1);
                 while ($row1 = sqlsrv_fetch_array($query1)) {
@@ -110,7 +110,7 @@ $perintah1="SELECT KODE_BARANG, Nama_Barang,Harga_Jual,Stock FROM TblBarang WHER
  </tr>
 <?php 
 }
-		}
+		//}
                 ?> 
  
 
