@@ -44,7 +44,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 
 <select name="KODE_KATEGORI" id ="KODE_KATEGORI">
 
-<option value="">--Kategori--</option>
+ <option value="">--Kategori--</option>
 <?php              
  $perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGORI";
                 $query = sqlsrv_query($conn,$perintah);
@@ -83,8 +83,14 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  <td style="border: none;padding: 4px;"><b>Keterangan</b></td>
 
  </tr>
-
-
+<?php
+if(isset($_POST['KODE_KATEGORI'])){
+	 echo $_POST['KODE_KATEGORI'];
+	else {
+		echo "gagal";
+	}
+}
+	?>
 
  <tr>
 
