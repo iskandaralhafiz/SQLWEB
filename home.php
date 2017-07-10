@@ -32,39 +32,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  include "koneksi.php";
 ?>
   
-<form method="POST" action="home.php"> 
-  <table style="text-align: left; width: 401px; height: 194px;"
- border="0" cellpadding="2" cellspacing="2">
-    <tbody>      <tr>
-      <td colspan="2" rowspan="1"
- style="width: 119px; background-color: rgb(153, 0, 0);"><span
- style="color: white;">ENTRI PENJUALAN</span></td>
-      </tr>
-   <tr>
-        <td style="width: 119px;">No Faktur</td>
-        <td style="width: 297px;"><input type = "text" size="30"name="NoFaktur" id ="NoFaktur"></td>
-      </tr>
-      <tr>
-       <td style="width: 119px;">Tanggal</td>
-        <td style="width: 297px;"><input size="30"
- name="Tanggal"></td>
-     </tr>
-      <tr>
-        <td style="width: 119px;">Pelanggan</td>
-        <td style="width: 297px;">
-       <select name="Pelanggan">        </select>
-        </td>
-     </tr>
-      <tr>
-        <td colspan="2" rowspan="1"
- style="width: 119px;"></td>
-     </tr><input name="submit"
- value="Tambah" type="submit">
-    </tbody>
- </table>
-  
-        
-   </form>
+
        
 
 
