@@ -155,11 +155,13 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
   </tbody>
 </table>
 <script type="text/javascript">    
-    <?php echo $jsArray; ?>  
+    <?php
+ echo $jsArray; 
+ ?>  
     function changeValue(KODE_BARANG){  
     document.getElementById('Nama_Barang').value = dtMhs[KODE_BARANG].Nama_Barang;  
-    document.getElementById('Harga_Jual').value = dtMhs[KODE_BARANG].Harga_Jual;  
-    };  
+    document.getElementById('Harga_Jual').value = dtMhs[KODE_BARANG].Harga_Jual;
+    } 
     </script> 
 
 <br>
