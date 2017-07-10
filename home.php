@@ -41,7 +41,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 
 <td colspan="5">
 
-<form method="post">
+<form method="post" action="">
 
 <select name="KODE_KATEGORI" id ="KODE_KATEGORI">
 
@@ -65,7 +65,7 @@ $perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGOR
 	<input type="submit" value="cari" name="cari">
 
  </form>
-
+ 
  </td>
 
  </tr>
