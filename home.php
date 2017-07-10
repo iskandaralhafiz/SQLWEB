@@ -62,94 +62,14 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  value="Tambah" type="submit">
     </tbody>
  </table>
-  <table style="text-align: left; width: 620px; height: 60px;" border="0" cellpadding="2" cellspacing="2">
-    <tbody>
-      <tr>
-        <td style="width: 170px;">Nama Barang</td>
-        <td style="width: 79px;">Harga @</td>
-        <td style="width: 63px;">Qty</td>
-        <td style="width: 103px;">Jumlah</td>
-        <td style="width: 149px;"></td>
-      </tr>
-      <tr>
-        <td style="width: 170px;">
+  
         
    </form>
-        <td style="width: 79px;"><input size="15" 
- name="Harga">  
-       </td>
        
-        <td style="width: 63px;"><input size="5"
- name="qty"></td>
-        <td style="width: 103px;"><input size="15"
- name="total"></td>
-
- <td style="width: 149px;"></td>
-      </tr>
-    </tbody>
-  </table>
-  <hr style="width: 100%; height: 2px;">
-<table
- style="text-align: left; background-color: white; width: 715px;"
- border="1" cellpadding="2" cellspacing="2">
-  <tbody>
-    <tr>
-
-     <th style="background-color: rgb(153, 0, 0);"><span
- style="color: white;">No.</span></th>
-      <th style="width: 171px; background-color: rgb(153, 0, 0);"><span
- style="color: white;">Nama Barang</span></th>
-      <th style="width: 125px; background-color: rgb(153, 0, 0);"><span
- style="color: white;">Harga @</span></th>
-      <th style="width: 139px; background-color: rgb(153, 0, 0);"><span
- style="color: white;">Qty</span></th>
-      <th style="width: 206px; background-color: rgb(153, 0, 0);"><span
-                                                                        style="color: white;">Jumlah</span></th>
-    </tr>
-    <tr>
-      <td></td>
-      <td style="width: 171px; background-color: white;"></td>
-      <td style="width: 125px; background-color: white;"></td>
-      <td style="width: 139px; background-color: white;"></td>
-      <td style="width: 206px; background-color: white;"></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  
-
-  </tbody>
-</table>
 
 
-<?php
-//Try 
-//{
-// $conn = new PDO ( "sqlsrv:server = tcp:quantumcom.database.windows.net,1433; Database = SIMTIFDB", "qdadmin", "Kafalahajai5654@");
-//$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-//}
-//catch ( PDOException $e ){
-//print( "Error connecting to SQL Server" );
-//die(print_r($e));
-//}
 
-// Insert registration info
 
-//$stmt = $conn->prepare($sql_insert);
-//$stmt->bindValue(1, $Kode_Penguna);
-//$stmt->bindValue(2, $Nama_Pengguna);
-//$stmt->execute();
-//}
-//catch(PDOException $e) {
-  // print( "Error connecting to SQL Server" );
-//die(print_r($e));
- echo $_POST['NoFaktur'];
-
-?>
 </body>
 </html>
 
