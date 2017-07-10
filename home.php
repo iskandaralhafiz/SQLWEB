@@ -41,7 +41,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 
 <td colspan="5">
 
-<form method="post" action="home.php">
+<form method="post">
 
 <select name="KODE_KATEGORI" id ="KODE_KATEGORI">
 
