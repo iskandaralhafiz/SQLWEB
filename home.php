@@ -87,7 +87,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
                 ?>
                     <option value="<?php echo $row['KODE_BARANG']; ?>">
                         <?php echo $row['Nama_Barang']; ?>
-                    </option>                <
+                    </option>            
          ?php
               $jsArray .= "dtMhs['" . $row['KODE_BARANG'] . "'] = {Nama_Barang:'" . addslashes($row['Nama_Barang']) . "',Harga_Jual:'".addslashes($row['Harga_Jual'])."'};\n";    
                                                    
