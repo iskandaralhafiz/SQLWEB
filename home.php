@@ -7,6 +7,7 @@ session_start();
  ?>
  Selamat <b><?php echo $_SESSION['username'] ?></b> Berhasil Masuk <br />
  <a href="logout.php">Klik di sini</a> untuk Keluar
+<a href="barang.php">Klik di sini</a> nampilkan barang
 <?php } ?>//----------------------
 
 <html>
