@@ -87,7 +87,7 @@ $perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGOR
  </tr>
 
 <?php    
-	if(isset($_POST['cari']){
+	if(isset($_POST['cari'])){
  
 $KODE = $_POST['KODE_KATEGORI'];
 		
