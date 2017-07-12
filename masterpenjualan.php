@@ -4,7 +4,7 @@
 <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Entri Penjualan</title>
 
 </head><body>
-<img style="width: 340px; height: 75px;" alt="" src="file:///D:/AppPenjualan/Gambar/dapur2.PNG"><br>
+<img style="width: 300px; height: 80px;" alt="" src="dapur2.PNG"
 
 <form method="post" action="masterpenjualan.php" name="master_penjualan">
 <table style="text-align: left; width: 401px; height: 194px;" border="0" cellpadding="2" cellspacing="2">
