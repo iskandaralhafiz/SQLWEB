@@ -1,14 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-  <input>
-  <meta content="text/html; charset=ISO-8859-1"
+    <meta content="text/html; charset=ISO-8859-1"
  http-equiv="content-type">
   <title>penjualan.php</title>
 </head>
 <body>
 <img style="width: 340px; height: 75px;" alt=""
- src="file:///D:/AppPenjualan/Gambar/dapur2.PNG"><br>
+ src="dapur2.PNG"><br>
 <form method="post" action="masterpenjualan.php"
  name="master_penjualan">
   <table style="text-align: left; width: 401px; height: 194px;"
