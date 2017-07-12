@@ -35,6 +35,18 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
  include "koneksi.php";
 ?>
   
+
+     
+     
+     
+     
+  <table style="border: none;font-size: 12px;color: #5b5b5b;width: 100%;margin: 10px 0 10px 0;">
+	
+<tr>
+
+<td colspan="5">
+	
+	
 <div id="wb_Form1" style="position:absolute;width:662px;height:202px;">
 <form name="masterpenjualan" method="post" action="" enctype="text/plain" target="_self" id="Form1">
 <div id="wb_Text2" style="position:absolute;left:20px;top:33px;width:57px;height:16px;z-index:43;text-align:left;">
@@ -71,16 +83,8 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 </div>
 </form>
 </div>
-     
-     
-     
-     
-  <table style="border: none;font-size: 12px;color: #5b5b5b;width: 100%;margin: 10px 0 10px 0;">
 	
-<tr>
-
-<td colspan="5">
-
+	
 <form method="post" action ="home.php">
 
 <select name="KODE_KATEGORI" id ="KODE_KATEGORI" onchange="this.form.submit()">
