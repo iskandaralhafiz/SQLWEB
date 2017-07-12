@@ -66,9 +66,9 @@ $perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGOR
 
  </form>
  <?php
-	if(isset($_POST['KODE_KATEGORI'])){
+	if(isset($_POST['Kategori1'])){
 
-$Kategori1 = $_KODE_KATEGORI'];	
+$Kategori1 = $_Kategori1'];	
 	echo $Kategori1;
 	}
 	?>
