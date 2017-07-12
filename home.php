@@ -35,7 +35,6 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
   
 
   <table style="border: none;font-size: 12px;color: #5b5b5b;width: 100%;margin: 10px 0 10px 0;">
-
 	
 <tr>
 
@@ -72,7 +71,7 @@ $perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGOR
 $Kategori1 = $_POST['KODE_KATEGORI'];	
 	echo $Kategori1;
 	?>	
-		<input type="text" id="Kategori2" name="Kategori2" value="<?php echo $Kategori1; ?>">
+		<input type="text" id="Kategori1" value="<?php echo $Kategori1; ?>">
 	<?php
 	}
 	?>
