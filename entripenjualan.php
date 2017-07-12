@@ -1,9 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html><head>
-<input>
 <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Entri Penjualan</title>
 
-</head><body><img alt="" src="file:///D:/AppPenjualan/Gambar/dapur2.PNG" style="height: 75px; width: 340px" /><br />
+</head><body><img alt="" src="dapur2.PNG" style="height: 75px; width: 340px" /><br />
 &nbsp;
 <form action="masterpenjualan.php" method="post" name="master_penjualan">
 <table border="0" cellpadding="2" cellspacing="2" style="height: 194px; width: 430px; text-align: left">
