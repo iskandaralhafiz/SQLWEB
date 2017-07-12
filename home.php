@@ -61,10 +61,6 @@ $perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGOR
 
  </select>
 
-
-	<input type="submit" value="cari" name="cari">
-
- </form>
 <?php
 	if(isset($_POST['KODE_KATEGORI'])){
 
@@ -75,6 +71,10 @@ $Kategori1 = $_POST['KODE_KATEGORI'];
 	<?php
 	}
 	?>
+	<input type="submit" value="cari" name="cari">
+
+ </form>
+
 	
  </td>
 
