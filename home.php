@@ -41,7 +41,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 <td colspan="5">
 
 <form method="post" action ="home.php">
-<input type="text" id="Kategori1" name="Kategori1" value="">
+
 <select name="KODE_KATEGORI" id ="KODE_KATEGORI">
 
  <option value="">--Kategori--</option>
@@ -69,8 +69,9 @@ $Kategori1 = $_POST['KODE_KATEGORI'];
 	
 	}
 	?>
-	<input type="text" id="Kategori1" value="<?php echo $Kategori1; ?>">
 	<input type="submit" value="cari" name="cari">
+	<input type="text" id="Kategori1" name="Kategori1" value="<?php echo $Kategori1; ?>">
+	
 
  </form>
 
