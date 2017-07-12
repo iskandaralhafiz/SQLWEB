@@ -46,7 +46,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 
  <option value="">--Kategori--</option>
 <?php              
-$perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori WHERE Kategori = $Kategori1 ORDER BY KODE_KATEGORI";
+$perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGORI";
                 $query = sqlsrv_query($conn,$perintah);
                 while ($row = sqlsrv_fetch_array($query)) {
                 ?>
@@ -97,7 +97,7 @@ $Kategori1 = $_POST['KODE_KATEGORI'];
  </tr>
 
 <?php    
-$perintah1="SELECT KODE_BARANG, Nama_Barang,Harga_Jual,Stock FROM TblBarang ORDER BY KODE_BARANG";
+$perintah1="SELECT KODE_BARANG, Nama_Barang,Harga_Jual,Stock FROM TblBarang WHERE Kategori = $Kategori1 ORDER BY KODE_BARANG";
 
                 $query1 = sqlsrv_query($conn,$perintah1);
                 while ($row1 = sqlsrv_fetch_array($query1)) {
