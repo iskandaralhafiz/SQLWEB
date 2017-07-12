@@ -52,7 +52,8 @@ $perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGOR
                 while ($row = sqlsrv_fetch_array($query)) {
                 ?>
                     <option value="<?php echo $row['KODE_KATEGORI']; ?>">
-                        <?php echo $row['KATEGORI']; ?>
+
+			    <?php echo $row['KATEGORI']; ?>
                    </option>                
 					<?php
              }
@@ -70,6 +71,9 @@ $perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGOR
 
 $Kategori1 = $_POST['KODE_KATEGORI'];	
 	echo $Kategori1;
+	?>	
+		<input type="text" id="Kategori2" name="Kategori2" value="<?php echo $Kategori1; ?>">
+	<?php
 	}
 	?>
 	
