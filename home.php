@@ -46,7 +46,7 @@ td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 
  <option value="">--Kategori--</option>
 <?php              
-$perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGORI";
+$perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori WHERE Kategori = $Kategori1 ORDER BY KODE_KATEGORI";
                 $query = sqlsrv_query($conn,$perintah);
                 while ($row = sqlsrv_fetch_array($query)) {
                 ?>
