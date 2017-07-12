@@ -52,6 +52,7 @@ $perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGOR
                 ?>
                     <option value="<?php echo $row['KODE_KATEGORI']; ?>">
 
+			    
 			    <?php echo $row['KATEGORI']; ?>
                    </option>                
 					<?php
@@ -71,7 +72,9 @@ $Kategori1 = $_POST['KODE_KATEGORI'];
 	?>
 	<input type="submit" value="cari" name="cari">
 	<input type="text" id="Kategori1" name="Kategori1" value="<?php echo $Kategori1; ?>">
-	
+
+	<input type="text" id="from" name="from" onClick="if(self.gfPop)gfPop.fPopCalendar(document.postform.from);return false;"/><a href="javascript:void(0)" onClick="if(self.gfPop)gfPop.fPopCalendar(document.postform.from);return false;"><img name="popcal" align="absmiddle" style="border:none" src="calender/calender.jpeg" width="34" height="29" border="0" alt=""></a>
+
 
  </form>
 
