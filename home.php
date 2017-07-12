@@ -66,11 +66,10 @@ $perintah="SELECT KODE_KATEGORI, KATEGORI FROM TblKategori ORDER BY KODE_KATEGOR
 
 $Kategori1 = $_POST['KODE_KATEGORI'];	
 	echo $Kategori1;
-	?>	
-		<input type="text" id="Kategori1" value="<?php echo $Kategori1; ?>">
-	<?php
+	
 	}
 	?>
+	<input type="text" id="Kategori1" value="<?php echo $Kategori1; ?>">
 	<input type="submit" value="cari" name="cari">
 
  </form>
