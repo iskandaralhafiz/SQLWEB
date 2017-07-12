@@ -8,7 +8,7 @@ session_start();
  ?>
  Selamat <b><?php echo $_SESSION['username'] ?></b> Berhasil Masuk <br />
  <a href="logout.php">Klik di sini</a> untuk Keluar
-<a href="masterpenjualan.php">Klik di sini</a>
+<a href="entripenjualan.php">Klik di sini</a>
 
 <?php } ?>//----------------------
 
