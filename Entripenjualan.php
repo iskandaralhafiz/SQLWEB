@@ -34,8 +34,8 @@ $NoFaktur = $_POST['NoFaktur'];
 $Tanggal = $_POST['Tanggal'];
 $Pelanggan = $_POST['Pelanggan'];
 		echo $NoFaktur;
-	
-	$sql_insert = "INSERT INTO dbo.TblPenjualan (NO_FAKTURJ) VALUES ('$NoFaktur')";
+	echo $Tanggal;
+	$sql_insert = "INSERT INTO dbo.TblPenjualan (NO_FAKTURJ, Tanggal) VALUES ('$NoFaktur','$Tanggal')";
 $query3 = sqlsrv_query($conn,$sql_insert);
 sqlsrv_execute($query3);
 echo "<h3>Data berhasil dirkirim!</h3>";	
