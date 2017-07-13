@@ -29,8 +29,23 @@
 	</tbody>
 </table>
 
-<hr style="height: 2px; width: 100%" /></form>
+<hr style="height: 2px; width: 100%" />
+	</form>
 
+<?php
+	if(isset($_POST['NoFaktur'])) OR if(isset($_POST['Tanggal'])) {
+
+$NoFaktur = $_POST['NoFaktur'];
+$Tanggal = $_POST['Tanggal'];
+$Pelanggan = $_POST['Pelanggan']		
+	
+	$sql_insert = "INSERT INTO dbo.TblPenjualan (NO_FAKTURJ,Tanggal,Pelanggan) VALUES ('$NoFaktur','$Tanggal', $Pelanggan)";
+$query3 = sqlsrv_query($conn,$sql_insert);
+sqlsrv_execute($query3);
+	
+	
+	}
+	?>	
 
 <p>&nbsp;</p>
 
