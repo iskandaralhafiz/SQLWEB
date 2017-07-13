@@ -7,7 +7,7 @@
 	 <?php
  include "koneksi.php";
 ?>
-<form action="Entripenjualan.php" method="post">
+<form action="masterpenjualan.php" method="post">
 <table border="0" cellpadding="2" cellspacing="2" style="height: 194px; width: 430px; text-align: left">
 	<tbody>
 		<tr>
