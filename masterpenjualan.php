@@ -25,7 +25,8 @@ $query3 = sqlsrv_query($conn,$sql_insert);
 
 sqlsrv_execute($query3);
 
-echo "<h3>Data berhasil dirkirim!</h3>";	
+
+		echo "<h3>Data berhasil dirkirim!</h3>";	
 	
 
 	}
@@ -54,6 +55,7 @@ echo "<h3>Data berhasil dirkirim!</h3>";
 </tr>
 <tr>
 <td colspan="2" rowspan="1" style="width: 119px;"><input name="submit" value="Reset Form Penjualan" type="reset"></td>
+	<h1><input name="Total" style="height: 47px; width: 323px" type="text" /></h1>
 </tr>
 </tbody>
 </table><table style="text-align: left; width: 620px; height: 60px;" border="0" cellpadding="2" cellspacing="2">
