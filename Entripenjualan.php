@@ -26,14 +26,14 @@
 		<tr>
 			
 			<?php
-	if(isset($_POST['NoFaktur'])) OR if(isset($_POST['Tanggal'])) {
+	if(isset($_POST['NoFaktur'])) {
 
 $NoFaktur = $_POST['NoFaktur'];
 $Tanggal = $_POST['Tanggal'];
 $Pelanggan = $_POST['Pelanggan'];
 		echo $NoFaktur;
 	
-	$sql_insert = "INSERT INTO TblPenjualan (NO_FAKTURJ,Tanggal,Pelanggan) VALUES ('$NoFaktur','$Tanggal', $Pelanggan)";
+	$sql_insert = "INSERT INTO TblPenjualan (NO_FAKTURJ,Tanggal,Pelanggan) VALUES ('$NoFaktur',$Tanggal, $Pelanggan)";
 $query3 = sqlsrv_query($conn,$sql_insert);
 sqlsrv_execute($query3);
 	
