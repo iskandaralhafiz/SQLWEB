@@ -2,7 +2,7 @@
 <html><head>
 <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Entri Penjualan</title>
 
-</head><body><img alt="" src="file:///D:/AppPenjualan/Gambar/dapur2.PNG" style="height: 75px; width: 340px" /><br />
+</head><body><img alt="" src="dapur2.PNG" style="height: 75px; width: 340px" /><br />
 &nbsp;
 	 <?php
  include "koneksi.php";
@@ -35,7 +35,7 @@ $Tanggal = $_POST['Tanggal'];
 $Pelanggan = $_POST['Pelanggan'];
 		echo $NoFaktur;
 	
-	$sql_insert = "INSERT INTO dbo.TblPenjualan (NO_FAKTURJ,Tanggal,Pelanggan) VALUES ('$NoFaktur',$Tanggal, $Pelanggan)";
+	$sql_insert = "INSERT INTO dbo.TblPenjualan (NO_FAKTURJ,Tanggal) VALUES ('$NoFaktur',$Tanggal)";
 $query3 = sqlsrv_query($conn,$sql_insert);
 sqlsrv_execute($query3);
 	
