@@ -1,10 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html><head>
-<input>
 <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Entri Penjualan</title>
 
 </head><body><img alt="" src="file:///D:/AppPenjualan/Gambar/dapur2.PNG" style="height: 75px; width: 340px" /><br />
 &nbsp;
+	 <?php
+ include "koneksi.php";
+?>
 <form action="Entripenjualan.php" method="post">
 <table border="0" cellpadding="2" cellspacing="2" style="height: 194px; width: 430px; text-align: left">
 	<tbody>
@@ -33,7 +35,7 @@ $Tanggal = $_POST['Tanggal'];
 $Pelanggan = $_POST['Pelanggan'];
 		echo $NoFaktur;
 	
-	$sql_insert = "INSERT INTO TblPenjualan (NO_FAKTURJ,Tanggal,Pelanggan) VALUES ('$NoFaktur',$Tanggal, $Pelanggan)";
+	$sql_insert = "INSERT INTO dbo.TblPenjualan (NO_FAKTURJ,Tanggal,Pelanggan) VALUES ('$NoFaktur',$Tanggal, $Pelanggan)";
 $query3 = sqlsrv_query($conn,$sql_insert);
 sqlsrv_execute($query3);
 	
