@@ -27,22 +27,7 @@
 		</tr>
 		<tr>
 			
-			<?php
-	if(isset($_POST['NoFaktur'])) {
-
-$NoFaktur = $_POST['NoFaktur'];
-$Tanggal = $_POST['Tanggal'];
-$Pelanggan = $_POST['Pelanggan'];
-		echo $NoFaktur;
-	echo $Tanggal;
-	$sql_insert = "INSERT INTO dbo.TblPenjualan (NO_FAKTURJ, Tanggal) VALUES ('$NoFaktur','$Tanggal')";
-$query3 = sqlsrv_query($conn,$sql_insert);
-sqlsrv_execute($query3);
-echo "<h3>Data berhasil dirkirim!</h3>";	
-	
-	}
-		sqlsrv_close($conn);	
-	?>	
+			
 			<td colspan="2" style="width: 119px"><input name="submit" type="submit" value="Detil Penjualan" /></td>
 		</tr>
 	</tbody>
