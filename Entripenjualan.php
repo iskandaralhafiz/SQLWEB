@@ -5,7 +5,7 @@
 
 </head><body><img alt="" src="file:///D:/AppPenjualan/Gambar/dapur2.PNG" style="height: 75px; width: 340px" /><br />
 &nbsp;
-<form action="masterpenjualan.php" method="post" name="master_penjualan">
+<form action="Entripenjualan.php" method="post">
 <table border="0" cellpadding="2" cellspacing="2" style="height: 194px; width: 430px; text-align: left">
 	<tbody>
 		<tr>
@@ -24,6 +24,22 @@
 			<td style="width: 297px"><select name="Pelanggan"></select></td>
 		</tr>
 		<tr>
+			
+			<?php
+	if(isset($_POST['NoFaktur'])) OR if(isset($_POST['Tanggal'])) {
+
+$NoFaktur = $_POST['NoFaktur'];
+$Tanggal = $_POST['Tanggal'];
+$Pelanggan = $_POST['Pelanggan'];
+		echo $NoFaktur;
+	
+	$sql_insert = "INSERT INTO TblPenjualan (NO_FAKTURJ,Tanggal,Pelanggan) VALUES ('$NoFaktur','$Tanggal', $Pelanggan)";
+$query3 = sqlsrv_query($conn,$sql_insert);
+sqlsrv_execute($query3);
+	
+	
+	}
+	?>	
 			<td colspan="2" style="width: 119px"><input name="submit" type="submit" value="Detil Penjualan" /></td>
 		</tr>
 	</tbody>
@@ -32,20 +48,7 @@
 <hr style="height: 2px; width: 100%" />
 	</form>
 
-<?php
-	if(isset($_POST['NoFaktur'])) OR if(isset($_POST['Tanggal'])) {
 
-$NoFaktur = $_POST['NoFaktur'];
-$Tanggal = $_POST['Tanggal'];
-$Pelanggan = $_POST['Pelanggan']		
-	
-	$sql_insert = "INSERT INTO dbo.TblPenjualan (NO_FAKTURJ,Tanggal,Pelanggan) VALUES ('$NoFaktur','$Tanggal', $Pelanggan)";
-$query3 = sqlsrv_query($conn,$sql_insert);
-sqlsrv_execute($query3);
-	
-	
-	}
-	?>	
 
 <p>&nbsp;</p>
 
