@@ -6,6 +6,8 @@
 </head><body>
 <img style="width: 300px; height: 80px;" alt="" src="dapur2.PNG"
 
+     
+     
 <form method="post" action="masterpenjualan.php" name="master_penjualan">
 <table style="text-align: left; width: 401px; height: 194px;" border="0" cellpadding="2" cellspacing="2">
 <tbody>
@@ -14,7 +16,7 @@
 </tr>
 <tr>
 <td style="width: 119px;">No Faktur</td>
-<td style="width: 297px;"><input size="30" name="NoFaktur"></td>
+<td style="width: 297px;"><input size="30" name="NoFaktur"  value="<?php echo $NoFaktur?>"></td>
 </tr>
 <tr>
 <td style="width: 119px;">Tanggal</td>
